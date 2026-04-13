@@ -73,23 +73,28 @@ def _build_bottom_content(card):
         return ic_mix.width, ic_mix.height, items, []
 
     elif btype in ("move_to_drafted", "move_to_workshop"):
-        # [blank-card] → [right-arrow] → [target icon]
+        # Blank card with an arrow overlapping its top (up) or bottom (down) edge.
+        # move_to_drafted → up-arrow (matches top-left destroyCards icon).
+        # move_to_workshop → down-arrow.
         ic_card = load_icon(f"{ICON_DIR}/blank-card.png", 100)
-        ic_arr_r = load_icon(f"{ICON_DIR}/arrow.png", H_ARROW)
-        target_name = "project.png" if btype == "move_to_drafted" else "workshop.png"
-        target_h = H_WORK if btype == "move_to_workshop" else H_TOP
-        ic_target = load_icon(f"{ICON_DIR}/{target_name}", target_h)
+        rot = 90 if btype == "move_to_drafted" else -90
+        ic_arr = load_icon(f"{ICON_DIR}/arrow.png", H_ARROW).rotate(
+            rot, expand=True, resample=Image.LANCZOS
+        )
 
-        mid_gap = 6
-        total_w = ic_card.width + mid_gap + ic_arr_r.width + mid_gap + ic_target.width
-        total_h = max(ic_card.height, ic_arr_r.height, ic_target.height)
+        total_w = max(ic_card.width, ic_arr.width)
+        total_h = ic_card.height + ic_arr.height // 2
 
-        items = [
-            (ic_card, 0, (total_h - ic_card.height) // 2),
-            (ic_arr_r, ic_card.width + mid_gap, (total_h - ic_arr_r.height) // 2),
-            (ic_target, ic_card.width + mid_gap + ic_arr_r.width + mid_gap,
-             (total_h - ic_target.height) // 2),
-        ]
+        card_x = (total_w - ic_card.width) // 2
+        arr_x = (total_w - ic_arr.width) // 2
+        if btype == "move_to_drafted":
+            arr_y = 0
+            card_y = ic_arr.height // 2
+        else:
+            card_y = 0
+            arr_y = ic_card.height - ic_arr.height // 2
+
+        items = [(ic_card, card_x, card_y), (ic_arr, arr_x, arr_y)]
         return total_w, total_h, items, []
 
     elif btype == "swap":
