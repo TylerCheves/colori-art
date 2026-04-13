@@ -1,0 +1,713 @@
+# Colori — Single Source of Truth for Card Data
+# Used by the art generation pipeline (generate-cards CLI).
+#
+# Card counts:
+#   18 dye cards (3 starter basic + 3 primary + 6 secondary + 6 tertiary)
+#   18 material cards (3 starter + 15 draft)
+#    5 action cards (chalk starter + alum, cream-of-tartar, gum-arabic, potash)
+#   54 buyer cards (18 textile 2-star + 18 ceramic 3-star + 18 painting 4-star)
+#   -- Total: 95 unique card faces
+
+card_size: [750, 1050]
+
+# ──────────────────────────────────────────────────────────────────
+# Color definitions
+# ──────────────────────────────────────────────────────────────────
+
+colors:
+  primaries: [Red, Yellow, Blue]
+  secondaries: [Orange, Green, Purple]
+  tertiaries: [Vermilion, Amber, Chartreuse, Teal, Indigo, Magenta]
+
+color_descriptions:
+  vermilion: "brilliant orange-red vermilion"
+  amber: "warm golden amber"
+  chartreuse: "bright yellow-green chartreuse"
+  teal: "deep blue-green teal"
+  indigo: "deep blue-black indigo"
+  magenta: "vivid carmine magenta"
+  orange: "warm burnt orange"
+  green: "rich emerald green"
+  purple: "deep violet purple"
+  red: "deep crimson red"
+  yellow: "warm golden yellow"
+  blue: "rich cerulean blue"
+
+# ──────────────────────────────────────────────────────────────────
+# Dye Cards (18 total)
+# ──────────────────────────────────────────────────────────────────
+
+dye_cards:
+  # --- Starter basic dyes (1 per player, not in draft deck) ---
+
+  - name: basic-red
+    title: Red
+    ability: project
+    pigments: [red]
+    title_color: [160, 30, 30]
+    copies_in_deck: 0
+    art: >
+      A simple clay bowl filled with a generic red dye bath. Plain and
+      functional — a beginner's tool. The bowl is chipped and well-used.
+    palette: "deep crimson red"
+
+  - name: basic-yellow
+    title: Yellow
+    ability: project
+    pigments: [yellow]
+    title_color: [160, 120, 10]
+    copies_in_deck: 0
+    art: >
+      A simple clay bowl filled with a generic yellow dye bath. Plain and
+      functional — a beginner's tool. The bowl is chipped and well-used.
+    palette: "warm golden yellow"
+
+  - name: basic-blue
+    title: Blue
+    ability: project
+    pigments: [blue]
+    title_color: [30, 70, 150]
+    copies_in_deck: 0
+    art: >
+      A simple clay bowl filled with a generic blue dye bath. Plain and
+      functional — a beginner's tool. The bowl is chipped and well-used.
+    palette: "rich cerulean blue"
+
+  # --- Primary dyes (4 copies each in draft deck) ---
+
+  - name: kermes
+    title: Kermes
+    ability: project
+    pigments: [red, red, red]
+    title_color: [150, 25, 25]
+    copies_in_deck: 4
+    art: >
+      A gnarled Mediterranean oak branch crawling with tiny scarlet insects.
+      A dyer's hand reaches in with a small brush, carefully sweeping the
+      precious creatures into a ceramic bowl already stained deep crimson.
+    palette: "scarlet red and crimson"
+
+  - name: weld
+    title: Weld
+    ability: project
+    pigments: [yellow, yellow, yellow]
+    title_color: [155, 125, 10]
+    copies_in_deck: 4
+    art: >
+      Tall spikes of tiny yellow-green flowers bundled and hanging upside
+      down to dry from workshop rafters. Below them, a dye bath glows an
+      almost electric yellow, a skein of wool being lifted out with a
+      wooden rod, dripping brilliant gold.
+    palette: "electric yellow and gold"
+
+  - name: woad
+    title: Woad
+    ability: project
+    pigments: [blue, blue, blue]
+    title_color: [25, 50, 120]
+    copies_in_deck: 4
+    art: >
+      Broad green leaves being crushed in a stone trough by wooden mallets,
+      the pulp formed into dark balls set out to dry on wooden racks. A
+      fermentation vat in the background bubbles with a foul-smelling
+      blue-black liquor, a copper-blue sheen on its surface.
+    palette: "deep indigo blue and blue-black"
+
+  # --- Secondary dyes (4 copies each in draft deck) ---
+
+  - name: madder
+    title: Madder
+    ability: workshop3
+    pigments: [orange, red]
+    title_color: [155, 45, 30]
+    copies_in_deck: 4
+    art: >
+      Thick ruddy roots being pulled from dark earth by weathered hands,
+      soil still clinging to them. A cutting board nearby shows sliced
+      cross-sections of the root revealing rings of deepening red toward
+      the center.
+    palette: "ruddy orange-red and deep red"
+
+  - name: turmeric
+    title: Turmeric
+    ability: workshop3
+    pigments: [orange, yellow]
+    title_color: [180, 110, 15]
+    copies_in_deck: 4
+    art: >
+      Knobbly orange-yellow roots freshly cut, their interior a shocking
+      bright orange that stains everything it touches. A merchant's hands
+      are permanently yellowed from handling the spice. Powder spills from
+      a cloth sack onto a market stall.
+    palette: "bright orange and deep yellow"
+
+  - name: dyers-greenweed
+    title: "Dyer's Greenweed"
+    ability: workshop3
+    pigments: [green, yellow]
+    title_color: [80, 120, 20]
+    copies_in_deck: 4
+    art: >
+      Low bushy shrubs covered in small bright yellow flowers growing along
+      a stone wall. A dyer's apprentice gathers armfuls of the flowering
+      branches, their apron already stained yellow from the morning's harvest.
+    palette: "bright yellow-green and chartreuse"
+
+  - name: verdigris
+    title: Verdigris
+    ability: workshop3
+    pigments: [green, blue]
+    title_color: [15, 110, 100]
+    copies_in_deck: 4
+    art: >
+      Copper plates stacked with grape skins and pomace in a sealed clay
+      pot, pulled open to reveal the metal surfaces crusted with a brilliant
+      blue-green patina. A craftsman carefully scrapes the vivid green
+      powder into a glass bottle.
+    palette: "brilliant blue-green and teal"
+
+  - name: orchil
+    title: Orchil
+    ability: workshop3
+    pigments: [purple, red]
+    title_color: [130, 40, 90]
+    copies_in_deck: 4
+    art: >
+      Crusts of pale grey-green lichen being scraped from coastal rocks
+      into a basket. In a workshop, the lichen ferments in covered clay
+      pots, the lid lifted to reveal a vivid reddish-purple paste.
+      Stained rags hang on a line behind.
+    palette: "reddish-purple and violet"
+
+  - name: logwood
+    title: Logwood
+    ability: workshop3
+    pigments: [purple, blue]
+    title_color: [70, 35, 120]
+    copies_in_deck: 4
+    art: >
+      Dark heartwood chips steeping in a copper cauldron, the liquid a deep
+      blue-violet that shifts color as it catches the light. A dyer tests
+      the shade by dipping a white linen strip, pulling it out to reveal a
+      rich purple-blue stain spreading through the fibers.
+    palette: "deep blue-violet and purple"
+
+  # --- Tertiary dyes (4 copies each in draft deck) ---
+
+  - name: vermilion
+    title: Vermilion
+    ability: mix2
+    pigments: [vermilion]
+    title_color: [190, 55, 20]
+    copies_in_deck: 4
+    art: >
+      Brilliant orange-red crystals of cinnabar in a lined wooden box,
+      glowing almost unnaturally bright. An apothecary grinds them
+      carefully with a cloth over his mouth, the resulting powder a
+      shocking scarlet against the dark stone mortar.
+    palette: "brilliant orange-red and scarlet"
+
+  - name: saffron
+    title: Saffron
+    ability: mix2
+    pigments: [amber]
+    title_color: [185, 100, 15]
+    copies_in_deck: 4
+    art: >
+      Delicate purple crocus flowers laid open on a marble table, their
+      precious red-orange stigmas being plucked with tweezers by careful
+      hands. Only a tiny pile of threads sits in a golden dish — a
+      fortune's worth of the rarest spice.
+    palette: "red-orange and amber gold"
+
+  - name: persian-berries
+    title: Persian Berries
+    ability: mix2
+    pigments: [chartreuse]
+    title_color: [90, 115, 15]
+    copies_in_deck: 4
+    art: >
+      Small clusters of dark green-to-black berries on thorny branches,
+      being sorted by a merchant who has laid them out on a woven tray.
+      Some crushed berries in a ceramic bowl show their bright
+      chartreuse-yellow juice against the white glaze.
+    palette: "chartreuse yellow-green"
+
+  - name: azurite
+    title: Azurite
+    ability: mix2
+    pigments: [teal]
+    title_color: [20, 90, 150]
+    copies_in_deck: 4
+    art: >
+      A rough chunk of brilliant blue mineral with botryoidal surface,
+      sitting on a vendecolori's shop counter alongside scales and small
+      brass weights. The stone seems to glow from within, a vivid sky
+      blue against the dark wood.
+    palette: "vivid sky blue and teal"
+
+  - name: indigo
+    title: Indigo
+    ability: mix2
+    pigments: [indigo]
+    title_color: [35, 30, 105]
+    copies_in_deck: 4
+    art: >
+      A merchant opens a tightly wrapped bundle from the East, revealing
+      dense cakes of dark blue-black pigment. He snaps a piece and the
+      fracture line gleams an iridescent metallic blue. Bolts of deep
+      blue silk hang in the background.
+    palette: "deep blue-black and iridescent metallic blue"
+
+  - name: cochineal
+    title: Cochineal
+    ability: mix2
+    pigments: [magenta]
+    title_color: [170, 25, 70]
+    copies_in_deck: 4
+    art: >
+      A cactus pad covered in white cottony clusters, split open to reveal
+      brilliant carmine-red insects beneath. In the background, a Spanish
+      galleon sits in Venice's harbor, barrels of dried cochineal being
+      unloaded onto the dock.
+    palette: "brilliant carmine-red and magenta"
+
+# ──────────────────────────────────────────────────────────────────
+# Material Cards (18 total: 3 starter + 15 draft)
+# ──────────────────────────────────────────────────────────────────
+
+material_cards:
+  # --- Starter materials (1 per player, not in draft deck) ---
+
+  - name: ceramics
+    title: Ceramics
+    material_types: [Ceramics]
+    ability: workshop3
+    copies_in_deck: 0
+    art: >
+      A maiolica potter's studio with a kick wheel at center and a small
+      kiln glowing in the back. Shelves hold unglazed earthenware forms
+      awaiting decoration. Brushes, pigment dishes, and a tin-glazed
+      plate mid-painting sit on the workbench.
+    palette: "warm earth tones and terracotta"
+
+  - name: paintings
+    title: Paintings
+    material_types: [Paintings]
+    ability: workshop3
+    copies_in_deck: 0
+    art: >
+      A Renaissance painter's bottega with a large canvas on an easel,
+      half-finished. A marble-topped table holds shells and ceramic cups
+      of ground pigments — vermilion, ultramarine, ochre. Apprentices
+      grind colors with mullers in the background while light streams
+      through tall arched windows.
+    palette: "rich pigment tones and warm studio light"
+
+  - name: textiles
+    title: Textiles
+    material_types: [Textiles]
+    ability: workshop3
+    copies_in_deck: 0
+    art: >
+      A Venetian dyer's workshop with wooden vats of richly colored liquid
+      lined along the walls. Skeins of freshly dyed wool and silk hang
+      drying from ceiling beams, dripping color onto the stone floor. A
+      loom sits in the corner, half-threaded with bright yarn.
+    palette: "richly colored dye tones and warm wood"
+
+  # --- Draft materials: double materials ---
+
+  - name: fine-ceramics
+    title: Fine Ceramics
+    material_types: [Ceramics, Ceramics]
+    ability: workshop2
+    copies_in_deck: 1
+    art: >
+      A master ceramicist's finest work: two exquisite maiolica pieces
+      side by side on a velvet-draped display — a large decorative
+      charger plate and a tall pharmacy jar, both gleaming with
+      brilliant tin glaze, ready for the kiln.
+    palette: "refined cream and earth tones"
+
+  - name: fine-paintings
+    title: Fine Paintings
+    material_types: [Paintings, Paintings]
+    ability: project
+    copies_in_deck: 1
+    art: >
+      Two canvases lean against the studio wall, both primed and ready.
+      A master painter examines them alongside a patron, gesturing at
+      preliminary charcoal sketches. Fine brushes and the best pigments
+      — lapis lazuli, lead white — are laid out on a marble slab.
+    palette: "warm studio light and canvas tones"
+
+  - name: fine-textiles
+    title: Fine Textiles
+    material_types: [Textiles, Textiles]
+    ability: draw2
+    copies_in_deck: 1
+    art: >
+      Bolts of the finest silk and damask stacked high in a merchant's
+      warehouse. The fabrics shimmer in the light — some shot through
+      with gold thread, others displaying intricate woven patterns.
+      A merchant's scale sits nearby, ready to weigh the precious goods.
+    palette: "shimmering silk tones and warm golds"
+
+  # --- Draft materials: material + color pip ---
+
+  - name: terra-cotta
+    title: Terra Cotta
+    material_types: [Ceramics]
+    color_pip: Red
+    ability: workshop2
+    copies_in_deck: 1
+    art: >
+      Rows of reddish-brown clay pots cooling on wooden racks after
+      firing. The distinctive warm red of terra cotta clay glows in
+      the kiln light. A potter's hands are stained red from working
+      the iron-rich clay all day.
+    palette: "warm reddish-brown terra cotta and kiln glow"
+
+  - name: ochre-ware
+    title: Ochre Ware
+    material_types: [Ceramics]
+    color_pip: Yellow
+    ability: workshop2
+    copies_in_deck: 1
+    art: >
+      Earthenware vessels glazed in warm yellow ochre tones, arranged
+      on a workshop shelf. A potter applies a yellow slip with a wide
+      brush to an unfired piece, the golden color bright against the
+      raw clay body.
+    palette: "golden yellow ochre and warm clay"
+
+  - name: cobalt-ware
+    title: Cobalt Ware
+    material_types: [Ceramics]
+    color_pip: Blue
+    ability: workshop2
+    copies_in_deck: 1
+    art: >
+      A ceramic workshop specializing in cobalt blue decoration. Deep
+      blue patterns are being painted onto white tin-glazed surfaces —
+      the iconic blue-and-white style. A small dish of precious cobalt
+      pigment sits beside the painter's brush.
+    palette: "deep cobalt blue and white tin glaze"
+
+  - name: cinnabar-canvas
+    title: "Cinnabar & Canvas"
+    material_types: [Paintings]
+    color_pip: Red
+    ability: project
+    copies_in_deck: 1
+    art: >
+      A painter's workspace with a stretched canvas and a generous
+      mound of ground cinnabar pigment in a ceramic shell. The
+      brilliant red powder catches the light, almost glowing. A
+      palette knife rests beside it, ready to mix with linseed oil.
+    palette: "brilliant cinnabar red and canvas tones"
+
+  - name: orpiment-canvas
+    title: "Orpiment & Canvas"
+    material_types: [Paintings]
+    color_pip: Yellow
+    ability: project
+    copies_in_deck: 1
+    art: >
+      A painter's studio with a fresh canvas and a dish of orpiment
+      pigment — a vivid golden-yellow mineral ground to fine powder.
+      The toxic but beautiful pigment glows warmly. A muller and
+      grinding stone sit nearby, dusted with yellow.
+    palette: "vivid golden-yellow orpiment and canvas"
+
+  - name: ultramarine-canvas
+    title: "Ultramarine & Canvas"
+    material_types: [Paintings]
+    color_pip: Blue
+    ability: project
+    copies_in_deck: 1
+    art: >
+      A painter's workshop with a blank canvas and the most precious
+      pigment of all — ultramarine blue, ground from lapis lazuli.
+      The deep blue powder sits in a glass vial, worth more than gold.
+      A patron's payment in ducats lies beside it.
+    palette: "precious ultramarine blue and canvas"
+
+  - name: alizarin-fabric
+    title: "Alizarin & Fabric"
+    material_types: [Textiles]
+    color_pip: Red
+    ability: draw2
+    copies_in_deck: 1
+    art: >
+      A dyer's vat filled with rich crimson alizarin dye. Lengths of
+      white linen are being lowered in, emerging a deep rose-red. The
+      madder root extract gives the most lightfast red of any natural
+      dye. Dyed fabrics hang to dry overhead.
+    palette: "deep alizarin crimson and rose-red"
+
+  - name: fustic-fabric
+    title: "Fustic & Fabric"
+    material_types: [Textiles]
+    color_pip: Yellow
+    ability: draw2
+    copies_in_deck: 1
+    art: >
+      Chips of bright yellow fustic wood steeping in a dye vat,
+      coloring the water a vivid golden-yellow. A length of wool
+      fabric is being drawn through the bath, taking on a warm
+      yellow tone. Sawdust and wood chips litter the workshop floor.
+    palette: "vivid golden-yellow fustic and warm wool"
+
+  - name: pastel-fabric
+    title: "Pastel & Fabric"
+    material_types: [Textiles]
+    color_pip: Blue
+    ability: draw2
+    copies_in_deck: 1
+    art: >
+      Balls of dried pastel (woad) being dissolved in a fermentation
+      vat, the liquid turning a deep blue. A silk scarf is being
+      dipped and withdrawn, showing the transformation from yellow-green
+      bath to rich blue on the fabric as it meets the air.
+    palette: "deep pastel blue and silk tones"
+
+  # --- Draft materials: dual materials ---
+
+  - name: clay-canvas
+    title: "Clay & Canvas"
+    material_types: [Ceramics, Paintings]
+    ability: destroy1
+    copies_in_deck: 1
+    art: >
+      A shared workshop where a potter and a painter work side by side.
+      Clay pots in various stages sit on one bench while stretched
+      canvases lean against the wall on the other. Tools and materials
+      from both crafts mingle in the shared space.
+    palette: "warm clay and canvas tones"
+
+  - name: clay-fabric
+    title: "Clay & Fabric"
+    material_types: [Ceramics, Textiles]
+    ability: destroy1
+    copies_in_deck: 1
+    art: >
+      A craftsman's studio combining pottery and weaving. A small kiln
+      sits next to a floor loom. Unfired clay vessels rest on shelves
+      above bolts of undyed cloth. The artisan moves between both
+      crafts with practiced ease.
+    palette: "earth clay and natural fabric tones"
+
+  - name: canvas-fabric
+    title: "Canvas & Fabric"
+    material_types: [Paintings, Textiles]
+    ability: destroy1
+    copies_in_deck: 1
+    art: >
+      A merchant's showroom displaying both fine paintings and luxury
+      textiles. Small framed canvases hang on the walls while bolts
+      of dyed silk and wool are draped across display tables. The
+      intersection of two Venetian luxury trades.
+    palette: "rich painting and textile tones"
+
+# ──────────────────────────────────────────────────────────────────
+# Action Cards (5 total: 1 starter + 4 draft)
+# ──────────────────────────────────────────────────────────────────
+
+action_cards:
+  - name: chalk
+    title: Chalk
+    copies_in_deck: 0
+    bottom:
+      type: pigment_choice
+      pigments: [blue, yellow, red]
+    art: >
+      A crumbling block of soft white chalk on a worn workbench, shavings
+      and dust scattered around it. Three small piles of freshly made
+      pigment powder sit nearby — red, yellow, and blue — each made by
+      grinding chalk with a different raw colorant. A flat grinding stone
+      shows streaks of all three colors.
+    palette: "soft white, with red, yellow, and blue pigment accents"
+
+  - name: alum
+    title: Alum
+    copies_in_deck: 4
+    bottom:
+      type: coin
+    art: >
+      A pale, translucent crystalline rock sitting on a merchant's scale,
+      one side freshly broken to reveal a glassy interior. Gold ducats are
+      stacked beside it on the counter — the two commodities practically
+      interchangeable in Venice. A ledger book lies open, recording the
+      transaction.
+    palette: "pale translucent whites, warm golds, and soft cream tones"
+
+  - name: cream-of-tartar
+    title: Cream of Tartar
+    copies_in_deck: 4
+    bottom:
+      type: draw_cards
+      count: "+3"
+    art: >
+      Reddish crystalline crusts being chipped from the inside of a dark
+      wine barrel with a small chisel. The scraped crystals collect in a
+      linen cloth below, pale pink and sparkling. Empty wine barrels are
+      stacked high in a Venetian cellar, an endless supply of this useful
+      byproduct.
+    palette: "reddish-pink crystals, dark wood tones, and pale sparkling whites"
+
+  - name: gum-arabic
+    title: Gum Arabic
+    copies_in_deck: 4
+    bottom:
+      type: pigment_choice
+      pigments: [green, purple, orange]
+    art: >
+      Amber-golden lumps of dried tree resin spread on a marble slab, some
+      already ground to a fine powder in a stone mortar. A craftsman presses
+      the sticky powder into a wooden mold alongside concentrated dye,
+      forming a dense colored block. Finished blocks in orange, green, and
+      purple dry on a shelf behind.
+    palette: "amber-golden resin, warm honey tones, and rich orange-green-purple accents"
+
+  - name: potash
+    title: Potash
+    copies_in_deck: 4
+    bottom:
+      type: materials
+      count: "3"
+    art: >
+      A coarse grey-white powder being scooped from a heavy burlap sack
+      with a wooden ladle, clouds of fine dust rising in the workshop air.
+      Three dye vats stand in a row behind, each receiving a measure. A
+      brick kiln for burning wood to ash smolders in the courtyard beyond
+      the door.
+    palette: "coarse grey-white, warm earth tones, and muted browns"
+
+# ──────────────────────────────────────────────────────────────────
+# Buyer Cards (54 total: 18 textile + 18 ceramic + 18 painting)
+#
+# Pattern expansion: each entry generates multiple buyer cards.
+# All buyers require 2 of the specified material type plus the
+# listed color cost. Use "_expand: true" to generate the
+# Cartesian product of tertiaries x the second color list.
+# ──────────────────────────────────────────────────────────────────
+
+buyer_cards:
+  # --- Textile buyers (2-star, 18 total) ---
+
+  # 6 cards: one tertiary color each
+  - material: Textiles
+    stars: 2
+    pattern: tertiary_only
+    tertiaries: [Vermilion, Amber, Chartreuse, Teal, Indigo, Magenta]
+
+  # 9 cards: one secondary + one primary
+  - material: Textiles
+    stars: 2
+    pattern: secondary_primary
+    pairs:
+      - [Orange, Red]
+      - [Orange, Yellow]
+      - [Orange, Blue]
+      - [Green, Red]
+      - [Green, Yellow]
+      - [Green, Blue]
+      - [Purple, Red]
+      - [Purple, Yellow]
+      - [Purple, Blue]
+
+  # 3 cards: triple primary
+  - material: Textiles
+    stars: 2
+    pattern: triple_primary
+    triples:
+      - [Red, Red, Red]
+      - [Yellow, Yellow, Yellow]
+      - [Blue, Blue, Blue]
+
+  # --- Ceramic buyers (3-star, 18 total) ---
+
+  # 18 cards: one tertiary + one primary (6 tertiaries x 3 primaries)
+  - material: Ceramics
+    stars: 3
+    pattern: tertiary_primary
+    _expand: true
+    tertiaries: [Vermilion, Amber, Chartreuse, Teal, Indigo, Magenta]
+    primaries: [Red, Yellow, Blue]
+
+  # --- Painting buyers (4-star, 18 total) ---
+
+  # 18 cards: one tertiary + one secondary (6 tertiaries x 3 secondaries)
+  - material: Paintings
+    stars: 4
+    pattern: tertiary_secondary
+    _expand: true
+    tertiaries: [Vermilion, Amber, Chartreuse, Teal, Indigo, Magenta]
+    secondaries: [Orange, Green, Purple]
+
+# Buyer card art descriptions (one template per material type)
+buyer_art:
+  Textiles: >
+    A length of dyed fabric draped over a merchant's display rod — fine
+    wool or linen cloth rendered in the colors indicated by the card's
+    color cost. The weave is visible and the dye is even and rich. Folded
+    bolts of the same cloth are stacked behind it in a Venetian textile shop.
+  Ceramics: >
+    A hand-painted maiolica plate or vase, decorated in the colors
+    indicated by the card's color cost. The design features Renaissance-style
+    scrollwork, florals, or a central figure rendered in vivid tin-glaze
+    pigments. The piece sits on a draped cloth in a ceramicist's workshop,
+    awaiting firing.
+  Paintings: >
+    A small Renaissance oil painting in an ornate gilded frame, rendered
+    primarily in the colors indicated by the card's color cost. The subject
+    is a Venetian scene — a portrait, a canal view, or a religious figure —
+    painted with visible brushwork and rich pigment. It leans against the
+    wall of an artist's studio.
+
+# Buyer card naming convention:
+#   textile:  {color(s)}-textile     (e.g. vermilion-textile, orange-red-textile)
+#   ceramic:  {colors}-ceramic       (e.g. vermilion-red-ceramic)
+#   painting: {colors}-painting      (e.g. vermilion-orange-painting)
+
+# Buyer material descriptions (for prompt building)
+buyer_material_descriptions:
+  textile: "raw bolts of undyed linen and wool cloth, loose unspun fibers, and a tailor's shears resting on uncut fabric"
+  ceramic: "a freshly thrown wet clay pot still on the wheel, unfired and unglazed, with raw clay and slip nearby"
+  painting: "a blank stretched canvas on an easel, with ground pigment powders in shells and an unused palette"
+
+# ──────────────────────────────────────────────────────────────────
+# Print copies — how many of each card to print for a full game set
+# ──────────────────────────────────────────────────────────────────
+
+print_copies:
+  # Starter cards: need N copies for N players (max 5)
+  starter_per_player:
+    - basic-red
+    - basic-yellow
+    - basic-blue
+    - ceramics
+    - paintings
+    - textiles
+    - chalk
+  max_players: 5
+
+  # Draft deck copies
+  draft_deck:
+    # Dye cards: 4 copies each (15 dyes x 4 = 60)
+    dye_copies: 4
+    # Action cards: 4 copies each (4 actions x 4 = 16)
+    action_copies: 4
+    # Draft material cards: 1 copy each (15 materials x 1 = 15)
+    material_copies: 1
+
+  # Buyer cards: 1 copy each (54 total)
+  buyer_copies: 1
+
+  # Summary:
+  #   Starter: 7 unique x 5 players = 35 cards
+  #   Draft deck: 60 dye + 16 action + 15 material = 91 cards
+  #   Buyers: 54 cards
+  #   Grand total: 180 cards to print
