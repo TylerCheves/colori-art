@@ -302,95 +302,97 @@ MATERIAL_CARDS = [
     {
         "name": "ceramics", "title": "Ceramics",
         "material_types": ["ceramic"], "ability": "workshop3",
-        "color_pip": None, "bg_type": "ceramic",
+        "color_pips": [], "bg_type": "ceramic",
     },
     {
         "name": "paintings", "title": "Paintings",
         "material_types": ["painting"], "ability": "workshop4",
-        "color_pip": None, "bg_type": "painting",
+        "color_pips": [], "bg_type": "painting",
     },
     {
         "name": "textiles", "title": "Textiles",
         "material_types": ["textile"], "ability": "workshop2",
-        "color_pip": None, "bg_type": "textile",
+        "color_pips": [], "bg_type": "textile",
     },
     # Double materials
     {
         "name": "fine-ceramics", "title": "Fine Ceramics",
         "material_types": ["ceramic", "ceramic"], "ability": "sell",
-        "color_pip": None, "bg_type": "ceramic",
+        "color_pips": [], "bg_type": "ceramic",
     },
     {
         "name": "fine-paintings", "title": "Fine Paintings",
         "material_types": ["painting", "painting"], "ability": "sell",
-        "color_pip": None, "bg_type": "painting",
+        "color_pips": [], "bg_type": "painting",
     },
     {
         "name": "fine-textiles", "title": "Fine Textiles",
         "material_types": ["textile", "textile"], "ability": "sell",
-        "color_pip": None, "bg_type": "textile",
+        "color_pips": [], "bg_type": "textile",
     },
     # Material + color pip
     {
         "name": "terra-cotta", "title": "Terra Cotta",
         "material_types": ["ceramic"], "ability": "workshop2",
-        "color_pip": "red", "bg_type": "ceramic",
+        "color_pips": ["red"], "bg_type": "ceramic",
     },
     {
         "name": "ochre-ware", "title": "Ochre Ware",
         "material_types": ["ceramic"], "ability": "workshop2",
-        "color_pip": "yellow", "bg_type": "ceramic",
+        "color_pips": ["yellow"], "bg_type": "ceramic",
     },
     {
         "name": "cobalt-ware", "title": "Cobalt Ware",
         "material_types": ["ceramic"], "ability": "workshop2",
-        "color_pip": "blue", "bg_type": "ceramic",
+        "color_pips": ["blue"], "bg_type": "ceramic",
     },
     {
         "name": "cinnabar-canvas", "title": "Cinnabar & Canvas",
         "material_types": ["painting"], "ability": "workshop2",
-        "color_pip": "red", "bg_type": "painting",
+        "color_pips": ["red"], "bg_type": "painting",
     },
     {
         "name": "orpiment-canvas", "title": "Orpiment & Canvas",
         "material_types": ["painting"], "ability": "workshop2",
-        "color_pip": "yellow", "bg_type": "painting",
+        "color_pips": ["yellow"], "bg_type": "painting",
     },
     {
         "name": "ultramarine-canvas", "title": "Ultramarine & Canvas",
         "material_types": ["painting"], "ability": "workshop2",
-        "color_pip": "blue", "bg_type": "painting",
+        "color_pips": ["blue"], "bg_type": "painting",
     },
+    # Textile + color pip cards output two pigments of that color instead of
+    # a textile plus a pigment.
     {
         "name": "alizarin-fabric", "title": "Alizarin & Fabric",
-        "material_types": ["textile"], "ability": "workshop2",
-        "color_pip": "red", "bg_type": "textile",
+        "material_types": [], "ability": "workshop2",
+        "color_pips": ["red", "red"], "bg_type": "textile",
     },
     {
         "name": "fustic-fabric", "title": "Fustic & Fabric",
-        "material_types": ["textile"], "ability": "workshop2",
-        "color_pip": "yellow", "bg_type": "textile",
+        "material_types": [], "ability": "workshop2",
+        "color_pips": ["yellow", "yellow"], "bg_type": "textile",
     },
     {
         "name": "pastel-fabric", "title": "Pastel & Fabric",
-        "material_types": ["textile"], "ability": "workshop2",
-        "color_pip": "blue", "bg_type": "textile",
+        "material_types": [], "ability": "workshop2",
+        "color_pips": ["blue", "blue"], "bg_type": "textile",
     },
     # Dual materials
     {
         "name": "clay-canvas", "title": "Clay & Canvas",
         "material_types": ["ceramic", "painting"], "ability": "sell",
-        "color_pip": None, "bg_type": "ceramic",
+        "color_pips": [], "bg_type": "ceramic",
     },
     {
         "name": "clay-fabric", "title": "Clay & Fabric",
         "material_types": ["ceramic", "textile"], "ability": "sell",
-        "color_pip": None, "bg_type": "ceramic",
+        "color_pips": [], "bg_type": "ceramic",
     },
     {
         "name": "canvas-fabric", "title": "Canvas & Fabric",
         "material_types": ["painting", "textile"], "ability": "sell",
-        "color_pip": None, "bg_type": "painting",
+        "color_pips": [], "bg_type": "painting",
     },
 ]
 

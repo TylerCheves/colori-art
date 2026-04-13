@@ -58,11 +58,9 @@ def get_icon_bounds(card):
     ic_arr_d = ic_arr_d.rotate(-90, expand=True, resample=Image.LANCZOS)
 
     mat_icons = [load_icon(f"{ICON_DIR}/{MAT_ICON[mt]}", H_PIG) for mt in card["material_types"]]
-    pip_icon = None
-    if card.get("color_pip"):
-        pip_icon = load_icon(f"{PIG_DIR}/{PIP_PIGMENT[card['color_pip']]}", H_PIG)
+    pip_icons = [load_icon(f"{PIG_DIR}/{PIP_PIGMENT[p]}", H_PIG) for p in card.get("color_pips", [])]
 
-    all_output_icons = mat_icons + ([pip_icon] if pip_icon else [])
+    all_output_icons = mat_icons + pip_icons
     bot_cw = max(ic_wrk.width, ic_arr_d.width, max(ic.width for ic in all_output_icons))
     bot_ch = ic_wrk.height + GAP_V + ic_arr_d.height + GAP_V
     for ic in all_output_icons:
@@ -78,7 +76,7 @@ def compose(card):
     """Compose a material card from background + icons + title.
 
     Args:
-        card: Dict with name, title, material_types, ability, color_pip, bg_type.
+        card: Dict with name, title, material_types, ability, color_pips, bg_type.
 
     Returns:
         PIL Image (RGBA) of the composed card, or None if background missing.
@@ -135,12 +133,13 @@ def compose(card):
         load_icon(f"{ICON_DIR}/{MAT_ICON[mt]}", H_PIG)
         for mt in card["material_types"]
     ]
-    pip_icon = None
-    if card.get("color_pip"):
-        pip_icon = load_icon(f"{PIG_DIR}/{PIP_PIGMENT[card['color_pip']]}", H_PIG)
+    pip_icons = [
+        load_icon(f"{PIG_DIR}/{PIP_PIGMENT[p]}", H_PIG)
+        for p in card.get("color_pips", [])
+    ]
 
-    # Bottom column: [workshop] [down arrow] [mat1] [mat2] ... [pip]
-    all_output_icons = mat_icons + ([pip_icon] if pip_icon else [])
+    # Bottom column: [workshop] [down arrow] [mat1] [mat2] ... [pip1] [pip2]
+    all_output_icons = mat_icons + pip_icons
     bot_cw = max(ic_wrk.width, ic_arr_d.width, max(ic.width for ic in all_output_icons))
     bot_ch = ic_wrk.height + GAP_V + ic_arr_d.height + GAP_V
     for ic in all_output_icons:
