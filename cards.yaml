@@ -4,9 +4,10 @@
 # Card counts:
 #   18 dye cards (3 starter basic + 3 primary + 6 secondary + 6 tertiary)
 #   18 material cards (3 starter + 15 draft)
-#    5 action cards (chalk starter + alum, cream-of-tartar, gum-arabic, potash)
+#    9 action cards (chalk starter + alum, cream-of-tartar, gum-arabic, potash,
+#                     vinegar, linseed-oil, lye, sal-ammoniac)
 #   54 buyer cards (18 textile 2-star + 18 ceramic 3-star + 18 painting 4-star)
-#   -- Total: 95 unique card faces
+#   -- Total: 99 unique card faces
 
 card_size: [750, 1050]
 
@@ -584,6 +585,32 @@ action_cards:
       brick kiln for burning wood to ash smolders in the courtyard beyond
       the door.
     palette: "coarse grey-white, warm earth tones, and muted browns"
+
+  - name: lye
+    title: Lye
+    copies_in_deck: 4
+    bottom:
+      type: move_to_drafted
+    art: >
+      A wooden ash-hopper dripping caustic lye water into a ceramic
+      catch-basin, the pale liquid pooling clear and dangerous. Heaps
+      of wood ash sit alongside hard yellow soap-cakes curing on a
+      shelf. A dyer wearing thick leather gloves stirs a vat with a
+      long paddle in a smoky Venetian workshop.
+    palette: "caustic pale whites, ash greys, and warm wood-smoke browns"
+
+  - name: sal-ammoniac
+    title: Sal Ammoniac
+    copies_in_deck: 4
+    bottom:
+      type: move_to_workshop
+    art: >
+      Clusters of pale translucent sal ammoniac crystals piled on a
+      copper tray, catching warm firelight with a faint yellow glow.
+      A small iron brazier smolders beside them, wisps of acrid vapor
+      curling into the shadows. Glass alembics and a mortar stained
+      with salts sit on the cluttered workbench.
+    palette: "translucent salt crystals, warm copper, and smoky dark browns"
 
 # ──────────────────────────────────────────────────────────────────
 # Buyer Cards (54 total: 18 textile + 18 ceramic + 18 painting)

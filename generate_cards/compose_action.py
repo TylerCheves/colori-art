@@ -72,6 +72,26 @@ def _build_bottom_content(card):
         items = [(ic_mix, 0, 0)]
         return ic_mix.width, ic_mix.height, items, []
 
+    elif btype in ("move_to_drafted", "move_to_workshop"):
+        # [blank-card] → [right-arrow] → [target icon]
+        ic_card = load_icon(f"{ICON_DIR}/blank-card.png", 100)
+        ic_arr_r = load_icon(f"{ICON_DIR}/arrow.png", H_ARROW)
+        target_name = "project.png" if btype == "move_to_drafted" else "workshop.png"
+        target_h = H_WORK if btype == "move_to_workshop" else H_TOP
+        ic_target = load_icon(f"{ICON_DIR}/{target_name}", target_h)
+
+        mid_gap = 6
+        total_w = ic_card.width + mid_gap + ic_arr_r.width + mid_gap + ic_target.width
+        total_h = max(ic_card.height, ic_arr_r.height, ic_target.height)
+
+        items = [
+            (ic_card, 0, (total_h - ic_card.height) // 2),
+            (ic_arr_r, ic_card.width + mid_gap, (total_h - ic_arr_r.height) // 2),
+            (ic_target, ic_card.width + mid_gap + ic_arr_r.width + mid_gap,
+             (total_h - ic_target.height) // 2),
+        ]
+        return total_w, total_h, items, []
+
     elif btype == "swap":
         bottle_h = 78
         arrow_h = 30

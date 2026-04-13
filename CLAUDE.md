@@ -32,10 +32,10 @@ python -m generate_cards --force --dry-run
 | Type | Count | Style |
 |------|-------|-------|
 | **Dye** | 18 (3 starter + 3 primary + 6 secondary + 6 tertiary) | White watercolor vignette |
-| **Action** | 5 (chalk starter + alum, cream-of-tartar, gum-arabic, potash) | Dark chiaroscuro |
+| **Action** | 9 (chalk starter + alum, cream-of-tartar, gum-arabic, potash, vinegar, linseed-oil, lye, sal-ammoniac) | Dark chiaroscuro |
 | **Material** | 18 (3 starter + 15 draft) | TBD |
 | **Buyer** | 54 (18 textile 2-star + 18 ceramic 3-star + 18 painting 4-star) | Gold/ornate |
-| **Total** | **95 unique card faces** | |
+| **Total** | **99 unique card faces** | |
 
 ## Pipeline
 

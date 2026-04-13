@@ -292,6 +292,30 @@ ACTION_CARDS = [
             "beside a small hand press. Stained rags and brushes lie nearby in a Venice workshop."
         ),
     },
+    {
+        "name": "lye", "title": "Lye",
+        "ability": "destroyCards",
+        "bottom": {"type": "move_to_drafted"},
+        "bg_color": "caustic pale whites, ash greys, and warm wood-smoke browns",
+        "touchup_color_desc": "white",
+        "art": (
+            "A wooden ash-hopper dripping caustic lye water into a ceramic catch-basin, the pale liquid "
+            "pooling clear and dangerous. Heaps of wood ash sit alongside hard yellow soap-cakes curing "
+            "on a shelf. A dyer wearing thick leather gloves stirs a vat with a long paddle in a smoky Venetian workshop."
+        ),
+    },
+    {
+        "name": "sal-ammoniac", "title": "Sal Ammoniac",
+        "ability": "destroyCards",
+        "bottom": {"type": "move_to_workshop"},
+        "bg_color": "translucent salt crystals, warm copper, and smoky dark browns",
+        "touchup_color_desc": "white",
+        "art": (
+            "Clusters of pale translucent sal ammoniac crystals piled on a copper tray, catching warm firelight "
+            "with a faint yellow glow. A small iron brazier smolders beside them, wisps of acrid vapor curling "
+            "into the shadows. Glass alembics and a mortar stained with salts sit on the cluttered workbench."
+        ),
+    },
 ]
 
 
