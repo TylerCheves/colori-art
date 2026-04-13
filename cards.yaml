@@ -436,7 +436,7 @@ material_cards:
 
   - name: alizarin-fabric
     title: "Alizarin & Fabric"
-    material_types: []
+    material_types: [Textiles]
     color_pips: [Red, Red]
     ability: draw2
     copies_in_deck: 1
@@ -449,7 +449,7 @@ material_cards:
 
   - name: fustic-fabric
     title: "Fustic & Fabric"
-    material_types: []
+    material_types: [Textiles]
     color_pips: [Yellow, Yellow]
     ability: draw2
     copies_in_deck: 1
@@ -462,7 +462,7 @@ material_cards:
 
   - name: pastel-fabric
     title: "Pastel & Fabric"
-    material_types: []
+    material_types: [Textiles]
     color_pips: [Blue, Blue]
     ability: draw2
     copies_in_deck: 1

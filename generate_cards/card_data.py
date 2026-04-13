@@ -361,21 +361,19 @@ MATERIAL_CARDS = [
         "material_types": ["painting"], "ability": "workshop2",
         "color_pips": ["blue"], "bg_type": "painting",
     },
-    # Textile + color pip cards output two pigments of that color instead of
-    # a textile plus a pigment.
     {
         "name": "alizarin-fabric", "title": "Alizarin & Fabric",
-        "material_types": [], "ability": "workshop2",
+        "material_types": ["textile"], "ability": "workshop2",
         "color_pips": ["red", "red"], "bg_type": "textile",
     },
     {
         "name": "fustic-fabric", "title": "Fustic & Fabric",
-        "material_types": [], "ability": "workshop2",
+        "material_types": ["textile"], "ability": "workshop2",
         "color_pips": ["yellow", "yellow"], "bg_type": "textile",
     },
     {
         "name": "pastel-fabric", "title": "Pastel & Fabric",
-        "material_types": [], "ability": "workshop2",
+        "material_types": ["textile"], "ability": "workshop2",
         "color_pips": ["blue", "blue"], "bg_type": "textile",
     },
     # Dual materials
