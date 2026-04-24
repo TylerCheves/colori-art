@@ -16,7 +16,7 @@ from .card_data import (
 )
 from .rendering import (
     W, H, EDGE, PAD, H_TOP, H_COIN,
-    load_icon,
+    load_icon, find_background_image,
 )
 
 GAP_H = 34
@@ -58,8 +58,8 @@ def compose(name):
     Returns:
         PIL Image (RGBA) of the composed card, or None if background missing.
     """
-    bg_path = os.path.join(BG_DIR / "project", f"{name}.png")
-    if not os.path.exists(bg_path):
+    bg_path = find_background_image(BG_DIR / "project", name)
+    if bg_path is None:
         return None
 
     bg = Image.open(bg_path).resize((W, H), Image.LANCZOS).convert("RGBA")

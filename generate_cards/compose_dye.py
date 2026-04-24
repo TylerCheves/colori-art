@@ -18,6 +18,7 @@ from .rendering import (
     load_icon, paste_icon, get_font,
     draw_text, draw_text_with_glow, draw_title_right_aligned,
     composite_artwork_on_base, COMPOSITE_PARAMS,
+    find_background_image,
 )
 
 # Set of tertiary pigments that render larger
@@ -75,17 +76,17 @@ def compose(card):
         PIL Image (RGBA) of the composed card, or None if background missing.
     """
     # Try layered compositing: base texture + artwork vignette
-    base_path = BASE_BG_DIR / "dye.png"
-    artwork_path = ARTWORK_DIR / "dye" / f"{card['name']}.png"
+    base_path = find_background_image(BASE_BG_DIR, "dye")
+    artwork_path = find_background_image(ARTWORK_DIR / "dye", card["name"])
 
-    if os.path.exists(base_path) and os.path.exists(artwork_path):
+    if base_path and artwork_path:
         base = Image.open(base_path).resize((W, H), Image.LANCZOS).convert("RGBA")
         artwork = Image.open(artwork_path).convert("RGBA")
         c = composite_artwork_on_base(base, artwork, **COMPOSITE_PARAMS["dye"])
     else:
         # Fallback to old single-background approach
-        bg_path = os.path.join(BG_DIR / "dye", f"{card['name']}.png")
-        if not os.path.exists(bg_path):
+        bg_path = find_background_image(BG_DIR / "dye", card["name"])
+        if bg_path is None:
             return None
         c = Image.open(bg_path).resize((W, H), Image.LANCZOS).convert("RGBA")
 

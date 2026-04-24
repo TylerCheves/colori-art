@@ -18,6 +18,7 @@ from .rendering import (
     load_icon, paste_icon, get_font, tsize, cloud_panel,
     draw_text, draw_text_with_glow, draw_title_right_aligned,
     composite_artwork_on_base_opaque, COMPOSITE_PARAMS,
+    find_background_image,
 )
 
 
@@ -178,17 +179,17 @@ def compose(card):
         PIL Image (RGBA) of the composed card, or None if background missing.
     """
     # Try layered compositing: base texture + artwork vignette
-    base_path = BASE_BG_DIR / "action.png"
-    artwork_path = ARTWORK_DIR / "action" / f"{card['name']}.png"
+    base_path = find_background_image(BASE_BG_DIR, "action")
+    artwork_path = find_background_image(ARTWORK_DIR / "action", card["name"])
 
-    if os.path.exists(base_path) and os.path.exists(artwork_path):
+    if base_path and artwork_path:
         base = Image.open(base_path).resize((W, H), Image.LANCZOS).convert("RGBA")
         artwork = Image.open(artwork_path).convert("RGBA")
         c = composite_artwork_on_base_opaque(base, artwork, **COMPOSITE_PARAMS["action"])
     else:
         # Fallback to old single-background approach
-        bg_path = os.path.join(BG_DIR / "action", f"{card['name']}.png")
-        if not os.path.exists(bg_path):
+        bg_path = find_background_image(BG_DIR / "action", card["name"])
+        if bg_path is None:
             return None
         c = Image.open(bg_path).resize((W, H), Image.LANCZOS).convert("RGBA")
 

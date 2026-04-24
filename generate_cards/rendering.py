@@ -1,7 +1,29 @@
 """Shared Pillow helpers for card composition: cloud panels, icon loading, text rendering."""
 
+from pathlib import Path
+
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
+
+
+# Extensions tried (in order) when resolving a background/artwork input to a
+# file on disk. JPG wins over PNG when both exist, so a hand-dropped JPG
+# overrides the machine-generated PNG without needing to delete the PNG.
+BG_EXTENSIONS = (".jpg", ".jpeg", ".png")
+
+
+def find_background_image(directory, stem):
+    """Return the first existing `{directory}/{stem}{ext}` path.
+
+    Tries extensions in BG_EXTENSIONS order. Returns a Path, or None if
+    no matching file exists.
+    """
+    directory = Path(directory)
+    for ext in BG_EXTENSIONS:
+        p = directory / f"{stem}{ext}"
+        if p.exists():
+            return p
+    return None
 
 
 # ── Layout constants ─────────────────────────────────────────────────────────
