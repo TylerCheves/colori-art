@@ -9,7 +9,7 @@ from google import genai
 from google.genai import types
 
 API_KEY = os.environ.get("GOOGLE_API_KEY")
-MODEL = "nano-banana-pro-preview"
+MODEL = "gemini-3-pro-image"
 INPUT = "new-drafts/cinnabar-v2.png"
 OUTPUT_DIR = "new-drafts"
 

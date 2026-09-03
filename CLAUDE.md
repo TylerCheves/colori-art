@@ -90,9 +90,13 @@ colori-art/
 
 ## API
 
-- **Image generation model:** `nano-banana-pro-preview` (google-genai SDK)
+- **Image generation model:** `gemini-3-pro-image` (google-genai SDK)
+- **Touchup model:** `gemini-3.1-flash-image`
 - **API key env var:** `GOOGLE_API_KEY`
 - **Card size:** 750x1050px (2.5x3.5in @ 300 DPI, 5:7 aspect ratio)
+- **Generation aspect ratio:** `2:3` — the API offers no 5:7 option, so
+  backgrounds and artwork are generated at 2:3 and saved uncropped. Crop to
+  5:7 before composing; `compose` stretches anything that isn't already 5:7.
 - **Rate limiting:** 5-second pause between API calls, 1 retry on failure
 
 ## Card Naming
