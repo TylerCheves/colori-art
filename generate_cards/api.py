@@ -8,9 +8,9 @@ from google import genai
 from google.genai import types
 
 API_KEY = os.environ.get("GOOGLE_API_KEY")
-BG_MODEL = "nano-banana-pro-preview"
-TOUCHUP_MODEL = "gemini-3.1-flash-image-preview"
-WIDTH, HEIGHT = 750, 1050
+BG_MODEL = "gemini-3-pro-image"
+TOUCHUP_MODEL = "gemini-3.1-flash-image"
+ASPECT_RATIO = "2:3"
 
 # Rate limiting
 _last_call_time = 0.0
@@ -65,12 +65,12 @@ def generate_image_no_ref(prompt, output_path):
                 contents=[prompt],
                 config=types.GenerateContentConfig(
                     response_modalities=["IMAGE", "TEXT"],
+                    image_config=types.ImageConfig(aspect_ratio=ASPECT_RATIO),
                 ),
             )
 
             img = _extract_image(response)
             if img:
-                img = img.resize((WIDTH, HEIGHT), Image.LANCZOS)
                 os.makedirs(os.path.dirname(output_path), exist_ok=True)
                 img.save(output_path, "PNG")
                 return True
@@ -120,12 +120,12 @@ def generate_image(prompt, reference_image_path, output_path):
                 contents=[ref_image, prompt],
                 config=types.GenerateContentConfig(
                     response_modalities=["IMAGE", "TEXT"],
+                    image_config=types.ImageConfig(aspect_ratio=ASPECT_RATIO),
                 ),
             )
 
             img = _extract_image(response)
             if img:
-                img = img.resize((WIDTH, HEIGHT), Image.LANCZOS)
                 os.makedirs(os.path.dirname(output_path), exist_ok=True)
                 img.save(output_path, "PNG")
                 return True

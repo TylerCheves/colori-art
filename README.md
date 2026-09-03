@@ -115,7 +115,11 @@ colori-art/
 ## Configuration notes
 
 - **Card size:** 750×1050px (5:7 aspect at 300 DPI).
-- **Image model:** `nano-banana-pro-preview` via the `google-genai` SDK.
+- **Image model:** `gemini-3-pro-image` via the `google-genai` SDK; the
+  typography touchup pass uses `gemini-3.1-flash-image`.
+- **Generation aspect ratio:** `2:3` — the API offers no 5:7 option, so
+  backgrounds and artwork are generated at 2:3 and saved uncropped. Crop to
+  5:7 before composing; `compose` stretches anything that isn't already 5:7.
 - **API behavior:** 5-second pause between calls, 1 retry on failure.
 - **Card naming:**
   - Dye/Action/Material: `{card-name}.png` (e.g. `kermes.png`, `alum.png`).

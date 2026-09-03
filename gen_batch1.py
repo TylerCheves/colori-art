@@ -17,7 +17,7 @@ from google import genai
 from google.genai import types
 
 API_KEY = os.environ.get("GOOGLE_API_KEY")
-MODEL = "gemini-3.1-flash-image-preview"
+MODEL = "gemini-3.1-flash-image"
 WIDTH, HEIGHT = 750, 1050
 OUTPUT_DIR = "finals-without-iconography"
 RATE_LIMIT = 5  # seconds between calls
