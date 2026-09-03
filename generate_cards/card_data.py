@@ -257,6 +257,13 @@ DYE_CARDS = [
         "touchup_color_desc": "muted sage green",
         "art": "Pale grey-green clay dug from a hillside seam, drying in flat cakes on a slatted wooden rack. A painter brushes a thin wash of it across a gessoed panel as the underlayer for a face, the muted sage tone soft and chalky where it settles into the grain.",
     },
+    {
+        "name": "lapis-lazuli", "title": "Lapis Lazuli", "ability": "sell",
+        "pigments": ["blue-pigment"], "color": (40, 55, 140),
+        "bg_color": "deep ultramarine blue and violet-blue",
+        "touchup_color_desc": "deep ultramarine blue",
+        "art": "A rough block of deep blue stone shot through with glittering flecks of gold pyrite, cracked open on a merchant's counter beside a set of brass scales. Behind it a craftsman kneads the ground powder into a lump of wax and resin under warm water, the first press bleeding an intense violet-blue into the basin.",
+    },
 ]
 
 

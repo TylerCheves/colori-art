@@ -6,7 +6,7 @@
 #
 # Card counts:
 #   18 dye cards (3 starter basic + 3 primary + 6 secondary + 6 tertiary)
-#    7 mineral/resin pigments (artwork only, no tier assigned)
+#    8 mineral/resin pigments (artwork only, no tier assigned)
 #   18 material cards (3 starter + 15 draft)
 #    9 action cards (chalk starter + alum, cream-of-tartar, gum-arabic, potash,
 #                     vinegar, linseed-oil, lye, sal-ammoniac)
@@ -371,6 +371,20 @@ dye_cards:
       gessoed panel as the underlayer for a face, the muted sage tone soft
       and chalky where it settles into the grain.
     palette: "muted sage and grey-green"
+
+  - name: lapis-lazuli
+    title: Lapis Lazuli
+    ability: TBD
+    pigments: [blue]
+    title_color: [40, 55, 140]
+    copies_in_deck: 0
+    art: >
+      A rough block of deep blue stone shot through with glittering flecks
+      of gold pyrite, cracked open on a merchant's counter beside a set of
+      brass scales. Behind it a craftsman kneads the ground powder into a
+      lump of wax and resin under warm water, the first press bleeding an
+      intense violet-blue into the basin.
+    palette: "deep ultramarine blue and violet-blue"
 
 # ──────────────────────────────────────────────────────────────────
 # Material Cards (18 total: 3 starter + 15 draft)
