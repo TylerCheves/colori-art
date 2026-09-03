@@ -84,7 +84,7 @@ base-backgrounds → artwork → compose → enhance (dye) → touchup → layou
 
 ```
 colori-art/
-  cards.yaml                   # Single source of truth — card names, abilities, art prompts, copy counts
+  cards.yaml                   # Reference only — NOT loaded; see generate_cards/card_data.py
   pyproject.toml
   for-colori-web-app/          # Exported final art
   generate_cards/
@@ -135,5 +135,7 @@ colori-art/
 
 - **Game logic** (abilities, costs, deck composition): the Colori web app repo
   (`colori/src/data/cards.ts`).
-- **Art pipeline** (names, prompts, copy counts, visual styling): `cards.yaml`
+- **Art pipeline** (names, prompts, copy counts, visual styling):
+  `generate_cards/card_data.py`. `cards.yaml` mirrors it as a design
+  reference but is not loaded by any code and has drifted from it.
   in this repo.
