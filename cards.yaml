@@ -1,8 +1,12 @@
-# Colori — Single Source of Truth for Card Data
-# Used by the art generation pipeline (generate-cards CLI).
+# Colori — Card Data (reference only)
+#
+# NOTE: this file is NOT loaded by the pipeline. generate_cards/card_data.py
+# holds the definitions the CLI actually uses, and the two have drifted.
+# Edit card_data.py to change pipeline behavior; keep this in sync by hand.
 #
 # Card counts:
 #   18 dye cards (3 starter basic + 3 primary + 6 secondary + 6 tertiary)
+#    7 mineral/resin pigments (artwork only, no tier assigned)
 #   18 material cards (3 starter + 15 draft)
 #    9 action cards (chalk starter + alum, cream-of-tartar, gum-arabic, potash,
 #                     vinegar, linseed-oil, lye, sal-ammoniac)
@@ -272,6 +276,101 @@ dye_cards:
       galleon sits in Venice's harbor, barrels of dried cochineal being
       unloaded onto the dock.
     palette: "brilliant carmine-red and magenta"
+
+  # --- Mineral and resin pigments (artwork only, not yet in the deck) ---
+  # Tier, ability and pigments are unassigned: every color slot in the tiers
+  # above is taken. Only `art` and `palette` drive artwork generation.
+
+  - name: dragons-blood
+    title: "Dragon's Blood"
+    ability: TBD
+    pigments: [red]
+    title_color: [150, 30, 30]
+    copies_in_deck: 0
+    art: >
+      Dark red resin weeping in beads from a slashed palm trunk, hardening
+      into glassy crimson lumps. On a merchant's counter the lumps are
+      heaped in a brass bowl beside a cake cracked open, the fresh fracture
+      glowing translucent blood-red where the light passes through it.
+    palette: "deep translucent blood-red and crimson"
+
+  - name: realgar
+    title: Realgar
+    ability: TBD
+    pigments: [orange]
+    title_color: [190, 70, 25]
+    copies_in_deck: 0
+    art: >
+      A cluster of translucent orange-red crystals broken from a rock face,
+      glinting like garnets in a shallow tin tray. An apothecary grinds a
+      fragment in a stone mortar with a cloth tied over his face, the powder
+      blooming a shocking orange against the grey stone.
+    palette: "fiery orange-red and burnt orange"
+
+  - name: orpiment
+    title: Orpiment
+    ability: TBD
+    pigments: [yellow]
+    title_color: [190, 150, 20]
+    copies_in_deck: 0
+    art: >
+      A fist-sized lump of golden mineral splitting along its layers into
+      brilliant lemon-yellow flakes that catch the light like gold leaf. An
+      apothecary lifts a flake with tongs, keeping well back from it; the
+      ground powder in the dish below is a saturated, almost luminous yellow.
+    palette: "brilliant lemon-yellow and gold"
+
+  - name: litharge
+    title: Litharge
+    ability: TBD
+    pigments: [amber]
+    title_color: [185, 125, 30]
+    copies_in_deck: 0
+    art: >
+      Molten lead skimmed in a shallow iron pan, the surface crusting into
+      flakes of yellow-orange oxide that a workman rakes aside with a long
+      iron tool. The scale glows amber where the heat still holds it,
+      cooling to a dull ochre at the pan's rim.
+    palette: "yellow-orange and amber ochre"
+
+  - name: malachite
+    title: Malachite
+    ability: TBD
+    pigments: [green]
+    title_color: [25, 115, 75]
+    copies_in_deck: 0
+    art: >
+      A polished chunk of banded green stone, its concentric rings of light
+      and dark green swirling like the cross-section of a tree. Beside it a
+      row of small dishes shows the powder ground progressively finer, the
+      color paling from deep green to soft mint.
+    palette: "banded malachite green and pale mint"
+
+  - name: copper-resinate
+    title: Copper Resinate
+    ability: TBD
+    pigments: [green]
+    title_color: [20, 100, 60]
+    copies_in_deck: 0
+    art: >
+      A glass flask of pine resin heating over a low charcoal brazier,
+      blue-green verdigris crystals dissolving into it and turning the
+      liquid a deep transparent emerald. A painter tilts a glazed test panel
+      to the light, the green so clear the wood grain still shows through it.
+    palette: "deep transparent emerald green"
+
+  - name: green-earth
+    title: Green Earth
+    ability: TBD
+    pigments: [green]
+    title_color: [95, 120, 80]
+    copies_in_deck: 0
+    art: >
+      Pale grey-green clay dug from a hillside seam, drying in flat cakes on
+      a slatted wooden rack. A painter brushes a thin wash of it across a
+      gessoed panel as the underlayer for a face, the muted sage tone soft
+      and chalky where it settles into the grain.
+    palette: "muted sage and grey-green"
 
 # ──────────────────────────────────────────────────────────────────
 # Material Cards (18 total: 3 starter + 15 draft)

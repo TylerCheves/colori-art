@@ -1,4 +1,8 @@
-"""Load and expand card data from cards.yaml or inline definitions."""
+"""Card definitions for the generation pipeline.
+
+These inline definitions are authoritative; cards.yaml is a reference doc and
+is not loaded.
+"""
 
 import os
 from pathlib import Path
@@ -200,6 +204,58 @@ DYE_CARDS = [
         "bg_color": "brilliant carmine-red and magenta",
         "touchup_color_desc": "vivid magenta-pink",
         "art": "A cactus pad covered in white cottony clusters, split open to reveal brilliant carmine-red insects beneath. In the background, a Spanish galleon sits in Venice's harbor, barrels of dried cochineal being unloaded onto the dock.",
+    },
+    # Mineral and resin pigments -- artwork only. Ability, pigments and print
+    # copies are placeholders pending a tier assignment; every color slot in the
+    # tiers above is already taken.
+    {
+        "name": "dragons-blood", "title": "Dragon's Blood", "ability": "sell",
+        "pigments": ["red-pigment"], "color": (150, 30, 30),
+        "bg_color": "deep translucent blood-red and crimson",
+        "touchup_color_desc": "deep blood-red",
+        "art": "Dark red resin weeping in beads from a slashed palm trunk, hardening into glassy crimson lumps. On a merchant's counter the lumps are heaped in a brass bowl beside a cake cracked open, the fresh fracture glowing translucent blood-red where the light passes through it.",
+    },
+    {
+        "name": "realgar", "title": "Realgar", "ability": "sell",
+        "pigments": ["orange-pigment"], "color": (190, 70, 25),
+        "bg_color": "fiery orange-red and burnt orange",
+        "touchup_color_desc": "fiery orange-red",
+        "art": "A cluster of translucent orange-red crystals broken from a rock face, glinting like garnets in a shallow tin tray. An apothecary grinds a fragment in a stone mortar with a cloth tied over his face, the powder blooming a shocking orange against the grey stone.",
+    },
+    {
+        "name": "orpiment", "title": "Orpiment", "ability": "sell",
+        "pigments": ["yellow-pigment"], "color": (190, 150, 20),
+        "bg_color": "brilliant lemon-yellow and gold",
+        "touchup_color_desc": "brilliant golden yellow",
+        "art": "A fist-sized lump of golden mineral splitting along its layers into brilliant lemon-yellow flakes that catch the light like gold leaf. An apothecary lifts a flake with tongs, keeping well back from it; the ground powder in the dish below is a saturated, almost luminous yellow.",
+    },
+    {
+        "name": "litharge", "title": "Litharge", "ability": "sell",
+        "pigments": ["amber-pigment"], "color": (185, 125, 30),
+        "bg_color": "yellow-orange and amber ochre",
+        "touchup_color_desc": "amber yellow-orange",
+        "art": "Molten lead skimmed in a shallow iron pan, the surface crusting into flakes of yellow-orange oxide that a workman rakes aside with a long iron tool. The scale glows amber where the heat still holds it, cooling to a dull ochre at the pan's rim.",
+    },
+    {
+        "name": "malachite", "title": "Malachite", "ability": "sell",
+        "pigments": ["green-pigment"], "color": (25, 115, 75),
+        "bg_color": "banded malachite green and pale mint",
+        "touchup_color_desc": "rich malachite green",
+        "art": "A polished chunk of banded green stone, its concentric rings of light and dark green swirling like the cross-section of a tree. Beside it a row of small dishes shows the powder ground progressively finer, the color paling from deep green to soft mint.",
+    },
+    {
+        "name": "copper-resinate", "title": "Copper Resinate", "ability": "sell",
+        "pigments": ["green-pigment"], "color": (20, 100, 60),
+        "bg_color": "deep transparent emerald green",
+        "touchup_color_desc": "deep emerald green",
+        "art": "A glass flask of pine resin heating over a low charcoal brazier, blue-green verdigris crystals dissolving into it and turning the liquid a deep transparent emerald. A painter tilts a glazed test panel to the light, the green so clear the wood grain still shows through it.",
+    },
+    {
+        "name": "green-earth", "title": "Green Earth", "ability": "sell",
+        "pigments": ["green-pigment"], "color": (95, 120, 80),
+        "bg_color": "muted sage and grey-green",
+        "touchup_color_desc": "muted sage green",
+        "art": "Pale grey-green clay dug from a hillside seam, drying in flat cakes on a slatted wooden rack. A painter brushes a thin wash of it across a gessoed panel as the underlayer for a face, the muted sage tone soft and chalky where it settles into the grain.",
     },
 ]
 

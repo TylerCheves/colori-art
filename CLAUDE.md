@@ -31,7 +31,8 @@ python -m generate_cards --force --dry-run
 
 | Type | Count | Style |
 |------|-------|-------|
-| **Dye** | 18 (3 starter + 3 primary + 6 secondary + 6 tertiary) | White watercolor vignette |
+| **Dye** | 24 (3 starter + 3 pure primary + 6 mixed primary + 6 secondary + 6 tertiary) | White watercolor vignette |
+| **Pigment** | 7 mineral/resin (artwork only, no tier assigned) | White watercolor vignette |
 | **Action** | 9 (chalk starter + alum, cream-of-tartar, gum-arabic, potash, vinegar, linseed-oil, lye, sal-ammoniac) | Dark chiaroscuro |
 | **Material** | 18 (3 starter + 15 draft) | TBD |
 | **Buyer** | 54 (18 textile 2-star + 18 ceramic 3-star + 18 painting 4-star) | Gold/ornate |
@@ -59,7 +60,7 @@ base-backgrounds → artwork → compose → enhance (dye only) → layout → e
 
 ```
 colori-art/
-  cards.yaml                   # Card data — names, abilities, art descriptions, copy counts
+  cards.yaml                   # Reference only — NOT loaded; see card_data.py
   pyproject.toml               # Dependencies: google-genai, Pillow, pyyaml
   for-colori-web-app/          # Exported final art for web app
   generate_cards/
@@ -107,4 +108,6 @@ colori-art/
 ## Source of Truth
 
 - **Game logic:** `/Users/tylercheves/lgr/colori/src/data/cards.ts`
-- **Art pipeline:** `cards.yaml` (this repo)
+- **Art pipeline:** `generate_cards/card_data.py` (this repo). `cards.yaml`
+  documents the same cards but is not loaded by any code and has drifted;
+  treat it as a design reference and update it by hand.
