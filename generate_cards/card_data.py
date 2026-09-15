@@ -264,6 +264,35 @@ DYE_CARDS = [
         "touchup_color_desc": "deep ultramarine blue",
         "art": "A rough block of deep blue stone shot through with glittering flecks of gold pyrite, cracked open on a merchant's counter beside a set of brass scales. Behind it a craftsman kneads the ground powder into a lump of wax and resin under warm water, the first press bleeding an intense violet-blue into the basin.",
     },
+    # Ingredient dyes -- artwork only; ability and print copies are not yet modeled.
+    {
+        "name": "iris", "title": "Iris", "ability": "sell",
+        "pigments": ["green-pigment", "purple-pigment"], "color": (95, 55, 130),
+        "bg_color": "violet purple and clear leaf green",
+        "touchup_color_desc": "violet purple",
+        "art": "Tall violet irises cut fresh and laid across a workbench, their petals crushed in a stone mortar. Where the purple juice meets a pinch of alum in a shallow shell it turns a clear leaf green, and a painter tests the new green on a scrap of parchment beside an uncut bloom.",
+    },
+    {
+        "name": "alkanet", "title": "Alkanet", "ability": "sell",
+        "pigments": ["orange-pigment", "purple-pigment"], "color": (140, 50, 85),
+        "bg_color": "deep red-violet and warm orange-red",
+        "touchup_color_desc": "deep red-violet",
+        "art": "Rough, dark roots of a low bristly plant with small bright blue flowers, split open to show a deep red-violet core. Steeped in warm oil, the roots bleed color into two glass dishes on the sill, one glowing a warm orange-red, the other deepening to purple.",
+    },
+    {
+        "name": "buckthorn", "title": "Buckthorn", "ability": "sell",
+        "pigments": ["orange-pigment", "green-pigment"], "color": (105, 110, 30),
+        "bg_color": "warm orange-yellow and deep sap green",
+        "touchup_color_desc": "deep sap green",
+        "art": "Thorny branches heavy with berries at every stage, some still orange-yellow and unripe, others ripened glossy black. A dyer sorts them into two bowls, crushing the unripe berries to a warm orange while the juice of the ripe ones thickens to a deep sap green, poured into a pig's bladder hung up to dry.",
+    },
+    {
+        "name": "lye", "title": "Lye", "ability": "sell",
+        "pigments": ["red-pigment", "yellow-pigment", "blue-pigment"], "color": (90, 85, 80),
+        "bg_color": "pale ash grey with crimson red, weld yellow, and ultramarine blue",
+        "touchup_color_desc": "ash grey",
+        "art": "Pale, clear lye poured from an earthenware jug into three shallow basins on a workshop table. In the first, crimson settles out of dissolved wool shearings; in the second, yellow blooms from boiled weld; in the third, a kneaded ball of wax and resin bleeds ultramarine blue. A dripping ash-hopper stands in the background.",
+    },
 ]
 
 
@@ -355,28 +384,70 @@ ACTION_CARDS = [
             "beside a small hand press. Stained rags and brushes lie nearby in a Venice workshop."
         ),
     },
-    {
-        "name": "lye", "title": "Lye",
-        "ability": "destroyCards",
-        "bottom": {"type": "move_to_drafted"},
-        "bg_color": "caustic pale whites, ash greys, and warm wood-smoke browns",
-        "touchup_color_desc": "white",
-        "art": (
-            "A wooden ash-hopper dripping caustic lye water into a ceramic catch-basin, the pale liquid "
-            "pooling clear and dangerous. Heaps of wood ash sit alongside hard yellow soap-cakes curing "
-            "on a shelf. A dyer wearing thick leather gloves stirs a vat with a long paddle in a smoky Venetian workshop."
-        ),
-    },
+    # Artwork only. Wine Lees and Borax also workshop once and Sal Ammoniac
+    # workshops the same card twice; compose can't draw those, so each bottom
+    # shows only part of the effect.
     {
         "name": "sal-ammoniac", "title": "Sal Ammoniac",
         "ability": "destroyCards",
-        "bottom": {"type": "move_to_workshop"},
-        "bg_color": "translucent salt crystals, warm copper, and smoky dark browns",
+        "bottom": {"type": "workshop_picks", "count": "2"},
+        "bg_color": "translucent salt whites, warm copper, and smoky dark browns",
         "touchup_color_desc": "white",
         "art": (
-            "Clusters of pale translucent sal ammoniac crystals piled on a copper tray, catching warm firelight "
-            "with a faint yellow glow. A small iron brazier smolders beside them, wisps of acrid vapor curling "
-            "into the shadows. Glass alembics and a mortar stained with salts sit on the cluttered workbench."
+            "A glass sublimation vessel set over a low brazier, pale vapor rising from the salt below and "
+            "settling as a crust of translucent crystals across the cool upper dome. An alchemist lifts the "
+            "dome to scrape the clean crystals into a copper tray, ready to go back over the fire a second "
+            "time."
+        ),
+    },
+    {
+        "name": "rubified-vitriol", "title": "Rubified Vitriol",
+        "ability": "destroyCards",
+        "bottom": {"type": "pigment_choice", "pigments": ["vermilion-pigment", "amber-pigment", "magenta-pigment"]},
+        "bg_color": "deep rust red, glowing furnace orange, and dark iron greys",
+        "touchup_color_desc": "rust red",
+        "art": (
+            "An iron retort pulled from a glowing furnace and cracked open on a stone bench, its bottom caked "
+            "with deep red powder. An alchemist scrapes the rust-red residue into a dish with a bone spatula, "
+            "while a jar of pale green vitriol crystals waits beside the furnace for its turn in the fire."
+        ),
+    },
+    {
+        "name": "green-vitriol", "title": "Green Vitriol",
+        "ability": "destroyCards",
+        "bottom": {"type": "pigment_choice", "pigments": ["chartreuse-pigment", "teal-pigment", "indigo-pigment"]},
+        "bg_color": "cool sea-glass green, pale blue-green, and dark iron greys",
+        "touchup_color_desc": "pale blue-green",
+        "art": (
+            "Pale blue-green crystals grown in clusters along the walls of a wooden leaching trough, glinting "
+            "like sea glass in the lamplight. A workman breaks off a cluster with a small hammer and drops it "
+            "into a glass jar heaped with cool green crystals, an empty iron retort waiting on the bench "
+            "beside it."
+        ),
+    },
+    {
+        "name": "wine-lees", "title": "Wine Lees",
+        "ability": "destroyCards",
+        "bottom": {"type": "draw_cards", "count": "+2"},
+        "bg_color": "deep wine purple, dark grape-skin reds, and warm lamplit browns",
+        "touchup_color_desc": "deep wine purple",
+        "art": (
+            "A wooden wine press in a lamplit courtyard, its vat drained low to reveal thick purple-black "
+            "dregs. A worker scoops the heavy, wet lees into a wicker basket that drips dark wine, beside a "
+            "glistening mound of pressed grape skins."
+        ),
+    },
+    {
+        "name": "borax", "title": "Borax",
+        "ability": "destroyCards",
+        "bottom": {"type": "coin"},
+        "bg_color": "clean crystalline whites, dusty grey-browns, and warm gold",
+        "touchup_color_desc": "white",
+        "art": (
+            "Rough grey-brown lumps of raw tincal tipped from a travel-worn sack beside a refiner's copper "
+            "pan, where the dissolved salt has recrystallized into clean colorless masses. A Venetian "
+            "merchant weighs one lump on a brass scale against a small stack of gold ducats, a goldsmith's "
+            "order waiting on the counter."
         ),
     },
 ]

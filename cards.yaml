@@ -4,14 +4,16 @@
 # holds the definitions the CLI actually uses, and the two have drifted.
 # Edit card_data.py to change pipeline behavior; keep this in sync by hand.
 #
-# Card counts:
-#   18 dye cards (3 starter basic + 3 primary + 6 secondary + 6 tertiary)
+# Card counts (as defined in card_data.py):
+#   24 dye cards (3 starter + 3 pure primary + 6 mixed primary + 6 secondary + 6 tertiary)
 #    8 mineral/resin pigments (artwork only, no tier assigned)
+#    4 ingredient dyes: iris, alkanet, buckthorn, lye (artwork only)
 #   18 material cards (3 starter + 15 draft)
-#    9 action cards (chalk starter + alum, cream-of-tartar, gum-arabic, potash,
-#                     vinegar, linseed-oil, lye, sal-ammoniac)
+#   12 action cards (chalk starter + alum, cream-of-tartar, gum-arabic, potash,
+#                     vinegar, linseed-oil, sal-ammoniac, rubified-vitriol,
+#                     green-vitriol, wine-lees, borax)
 #   54 buyer cards (18 textile 2-star + 18 ceramic 3-star + 18 painting 4-star)
-#   -- Total: 99 unique card faces
+#   -- Total: 120 unique card faces
 
 card_size: [750, 1050]
 
@@ -39,7 +41,7 @@ color_descriptions:
   blue: "rich cerulean blue"
 
 # ──────────────────────────────────────────────────────────────────
-# Dye Cards (18 total)
+# Dye Cards
 # ──────────────────────────────────────────────────────────────────
 
 dye_cards:
@@ -386,6 +388,62 @@ dye_cards:
       intense violet-blue into the basin.
     palette: "deep ultramarine blue and violet-blue"
 
+  # --- Ingredient dyes (artwork only, not yet in the deck) ---
+
+  - name: iris
+    title: Iris
+    ability: TBD
+    pigments: [green, purple]
+    title_color: [95, 55, 130]
+    copies_in_deck: 0
+    art: >
+      Tall violet irises cut fresh and laid across a workbench, their petals
+      crushed in a stone mortar. Where the purple juice meets a pinch of
+      alum in a shallow shell it turns a clear leaf green, and a painter
+      tests the new green on a scrap of parchment beside an uncut bloom.
+    palette: "violet purple and clear leaf green"
+
+  - name: alkanet
+    title: Alkanet
+    ability: TBD
+    pigments: [orange, purple]
+    title_color: [140, 50, 85]
+    copies_in_deck: 0
+    art: >
+      Rough, dark roots of a low bristly plant with small bright blue
+      flowers, split open to show a deep red-violet core. Steeped in warm
+      oil, the roots bleed color into two glass dishes on the sill, one
+      glowing a warm orange-red, the other deepening to purple.
+    palette: "deep red-violet and warm orange-red"
+
+  - name: buckthorn
+    title: Buckthorn
+    ability: TBD
+    pigments: [orange, green]
+    title_color: [105, 110, 30]
+    copies_in_deck: 0
+    art: >
+      Thorny branches heavy with berries at every stage, some still orange-
+      yellow and unripe, others ripened glossy black. A dyer sorts them into
+      two bowls, crushing the unripe berries to a warm orange while the
+      juice of the ripe ones thickens to a deep sap green, poured into a
+      pig's bladder hung up to dry.
+    palette: "warm orange-yellow and deep sap green"
+
+  - name: lye
+    title: Lye
+    ability: TBD
+    pigments: [red, yellow, blue]
+    title_color: [90, 85, 80]
+    copies_in_deck: 0
+    art: >
+      Pale, clear lye poured from an earthenware jug into three shallow
+      basins on a workshop table. In the first, crimson settles out of
+      dissolved wool shearings; in the second, yellow blooms from boiled
+      weld; in the third, a kneaded ball of wax and resin bleeds ultramarine
+      blue. A dripping ash-hopper stands in the background.
+    palette: "pale ash grey with crimson red, weld yellow, and ultramarine blue"
+
 # ──────────────────────────────────────────────────────────────────
 # Material Cards (18 total: 3 starter + 15 draft)
 # ──────────────────────────────────────────────────────────────────
@@ -626,7 +684,7 @@ material_cards:
     palette: "rich painting and textile tones"
 
 # ──────────────────────────────────────────────────────────────────
-# Action Cards (5 total: 1 starter + 4 draft)
+# Action Cards
 # ──────────────────────────────────────────────────────────────────
 
 action_cards:
@@ -699,31 +757,77 @@ action_cards:
       the door.
     palette: "coarse grey-white, warm earth tones, and muted browns"
 
-  - name: lye
-    title: Lye
-    copies_in_deck: 4
-    bottom:
-      type: move_to_drafted
-    art: >
-      A wooden ash-hopper dripping caustic lye water into a ceramic
-      catch-basin, the pale liquid pooling clear and dangerous. Heaps
-      of wood ash sit alongside hard yellow soap-cakes curing on a
-      shelf. A dyer wearing thick leather gloves stirs a vat with a
-      long paddle in a smoky Venetian workshop.
-    palette: "caustic pale whites, ash greys, and warm wood-smoke browns"
+  # --- Ingredient actions (artwork only, not yet in the deck) ---
+  # Wine Lees and Borax also workshop once; Sal Ammoniac workshops the same
+  # card twice. `bottom` shows only the part compose can draw.
 
   - name: sal-ammoniac
     title: Sal Ammoniac
-    copies_in_deck: 4
+    copies_in_deck: 0
     bottom:
-      type: move_to_workshop
+      type: workshop_picks
+      count: "2"
     art: >
-      Clusters of pale translucent sal ammoniac crystals piled on a
-      copper tray, catching warm firelight with a faint yellow glow.
-      A small iron brazier smolders beside them, wisps of acrid vapor
-      curling into the shadows. Glass alembics and a mortar stained
-      with salts sit on the cluttered workbench.
-    palette: "translucent salt crystals, warm copper, and smoky dark browns"
+      A glass sublimation vessel set over a low brazier, pale vapor rising
+      from the salt below and settling as a crust of translucent crystals
+      across the cool upper dome. An alchemist lifts the dome to scrape the
+      clean crystals into a copper tray, ready to go back over the fire a
+      second time.
+    palette: "translucent salt whites, warm copper, and smoky dark browns"
+
+  - name: rubified-vitriol
+    title: Rubified Vitriol
+    copies_in_deck: 0
+    bottom:
+      type: pigment_choice
+      pigments: [vermilion, amber, magenta]
+    art: >
+      An iron retort pulled from a glowing furnace and cracked open on a
+      stone bench, its bottom caked with deep red powder. An alchemist
+      scrapes the rust-red residue into a dish with a bone spatula, while a
+      jar of pale green vitriol crystals waits beside the furnace for its
+      turn in the fire.
+    palette: "deep rust red, glowing furnace orange, and dark iron greys"
+
+  - name: green-vitriol
+    title: Green Vitriol
+    copies_in_deck: 0
+    bottom:
+      type: pigment_choice
+      pigments: [chartreuse, teal, indigo]
+    art: >
+      Pale blue-green crystals grown in clusters along the walls of a wooden
+      leaching trough, glinting like sea glass in the lamplight. A workman
+      breaks off a cluster with a small hammer and drops it into a glass jar
+      heaped with cool green crystals, an empty iron retort waiting on the
+      bench beside it.
+    palette: "cool sea-glass green, pale blue-green, and dark iron greys"
+
+  - name: wine-lees
+    title: Wine Lees
+    copies_in_deck: 0
+    bottom:
+      type: draw_cards
+      count: "+2"
+    art: >
+      A wooden wine press in a lamplit courtyard, its vat drained low to
+      reveal thick purple-black dregs. A worker scoops the heavy, wet lees
+      into a wicker basket that drips dark wine, beside a glistening mound
+      of pressed grape skins.
+    palette: "deep wine purple, dark grape-skin reds, and warm lamplit browns"
+
+  - name: borax
+    title: Borax
+    copies_in_deck: 0
+    bottom:
+      type: coin
+    art: >
+      Rough grey-brown lumps of raw tincal tipped from a travel-worn sack
+      beside a refiner's copper pan, where the dissolved salt has
+      recrystallized into clean colorless masses. A Venetian merchant weighs
+      one lump on a brass scale against a small stack of gold ducats, a
+      goldsmith's order waiting on the counter.
+    palette: "clean crystalline whites, dusty grey-browns, and warm gold"
 
 # ──────────────────────────────────────────────────────────────────
 # Buyer Cards (54 total: 18 textile + 18 ceramic + 18 painting)
