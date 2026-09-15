@@ -10,11 +10,11 @@
 #    7 ingredient dyes: iris, alkanet, buckthorn, lye, sinopia, giallorino,
 #                        cornflower (artwork only)
 #   18 material cards (3 starter + 15 draft)
-#   12 action cards (chalk starter + alum, cream-of-tartar, gum-arabic, potash,
+#   13 action cards (chalk starter + alum, cream-of-tartar, gum-arabic, potash,
 #                     vinegar, linseed-oil, sal-ammoniac, rubified-vitriol,
-#                     green-vitriol, wine-lees, borax)
+#                     green-vitriol, wine-lees, borax, quicksilver)
 #   54 buyer cards (18 textile 2-star + 18 ceramic 3-star + 18 painting 4-star)
-#   -- Total: 123 unique card faces
+#   -- Total: 124 unique card faces
 
 card_size: [750, 1050]
 
@@ -870,6 +870,19 @@ action_cards:
       one lump on a brass scale against a small stack of gold ducats, a
       goldsmith's order waiting on the counter.
     palette: "clean crystalline whites, dusty grey-browns, and warm gold"
+
+  - name: quicksilver
+    title: Quicksilver
+    copies_in_deck: 0
+    bottom:
+      type: coin
+    art: >
+      A merchant's brass scale on a dark counter weighs a heavy stoppered
+      flask of quicksilver against a stack of gold ducats. Beside it a
+      shallow dish holds a pool of the liquid metal, mirroring the lamplight
+      like polished silver, and a few bright beads that escaped the pour
+      roll loose across the wood.
+    palette: "mirror-bright silver, warm gold, and deep lamplit browns"
 
 # ──────────────────────────────────────────────────────────────────
 # Buyer Cards (54 total: 18 textile + 18 ceramic + 18 painting)

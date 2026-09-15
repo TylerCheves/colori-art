@@ -471,6 +471,19 @@ ACTION_CARDS = [
             "order waiting on the counter."
         ),
     },
+    {
+        "name": "quicksilver", "title": "Quicksilver",
+        "ability": "destroyCards",
+        "bottom": {"type": "coin"},
+        "bg_color": "mirror-bright silver, warm gold, and deep lamplit browns",
+        "touchup_color_desc": "white",
+        "art": (
+            "A merchant's brass scale on a dark counter weighs a heavy stoppered flask of quicksilver against "
+            "a stack of gold ducats. Beside it a shallow dish holds a pool of the liquid metal, mirroring the "
+            "lamplight like polished silver, and a few bright beads that escaped the pour roll loose across "
+            "the wood."
+        ),
+    },
 ]
 
 
