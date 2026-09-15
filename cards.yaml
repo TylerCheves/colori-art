@@ -7,13 +7,14 @@
 # Card counts (as defined in card_data.py):
 #   24 dye cards (3 starter + 3 pure primary + 6 mixed primary + 6 secondary + 6 tertiary)
 #    8 mineral/resin pigments (artwork only, no tier assigned)
-#    4 ingredient dyes: iris, alkanet, buckthorn, lye (artwork only)
+#    7 ingredient dyes: iris, alkanet, buckthorn, lye, sinopia, giallorino,
+#                        cornflower (artwork only)
 #   18 material cards (3 starter + 15 draft)
 #   12 action cards (chalk starter + alum, cream-of-tartar, gum-arabic, potash,
 #                     vinegar, linseed-oil, sal-ammoniac, rubified-vitriol,
 #                     green-vitriol, wine-lees, borax)
 #   54 buyer cards (18 textile 2-star + 18 ceramic 3-star + 18 painting 4-star)
-#   -- Total: 120 unique card faces
+#   -- Total: 123 unique card faces
 
 card_size: [750, 1050]
 
@@ -443,6 +444,47 @@ dye_cards:
       weld; in the third, a kneaded ball of wax and resin bleeds ultramarine
       blue. A dripping ash-hopper stands in the background.
     palette: "pale ash grey with crimson red, weld yellow, and ultramarine blue"
+
+  - name: sinopia
+    title: Sinopia
+    ability: TBD
+    pigments: [red, red, red]
+    title_color: [150, 50, 35]
+    copies_in_deck: 0
+    art: >
+      A fresco painter on a wooden scaffold sketches the outline of a great
+      figure across fresh pale plaster in quick rust-red strokes. A pot of
+      red earth paste sits on the plank at his side, and below him an open
+      sack spills dark red lumps of the raw earth across the scaffold
+      boards.
+    palette: "rust red and warm earthy red-brown"
+
+  - name: giallorino
+    title: Giallorino
+    ability: TBD
+    pigments: [yellow, yellow, yellow]
+    title_color: [185, 150, 25]
+    copies_in_deck: 0
+    art: >
+      Inside a Murano glasshouse, a glassblower draws a glowing gather of
+      opaque yellow glass from the mouth of the furnace. Cooled cakes of the
+      same sunny yellow glass lie cracked open on a workbench nearby, one
+      fragment ground in a stone mortar to a bright lemon powder.
+    palette: "sunny lemon yellow and glowing furnace gold"
+
+  - name: cornflower
+    title: Cornflower
+    ability: TBD
+    pigments: [blue, blue, blue]
+    title_color: [60, 90, 170]
+    copies_in_deck: 0
+    art: >
+      Bright blue cornflowers gathered from the edge of a golden wheat
+      field, their petals stripped into a wooden bowl and pressed through
+      linen into a small glass dish of vivid blue juice. At a sunlit desk an
+      illuminator brushes the fresh blue into the petals of a painted flower
+      on a sheet of vellum.
+    palette: "bright cornflower blue and pale wheat gold"
 
 # ──────────────────────────────────────────────────────────────────
 # Material Cards (18 total: 3 starter + 15 draft)

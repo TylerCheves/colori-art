@@ -33,11 +33,11 @@ python -m generate_cards --force --dry-run
 |------|-------|-------|
 | **Dye** | 24 (3 starter + 3 pure primary + 6 mixed primary + 6 secondary + 6 tertiary) | White watercolor vignette |
 | **Pigment** | 8 mineral/resin (artwork only, no tier assigned) | White watercolor vignette |
-| **Ingredient dye** | 4: iris, alkanet, buckthorn, lye (artwork only) | White watercolor vignette |
+| **Ingredient dye** | 7: iris, alkanet, buckthorn, lye, sinopia, giallorino, cornflower (artwork only) | White watercolor vignette |
 | **Action** | 12 (chalk starter + alum, cream-of-tartar, gum-arabic, potash, vinegar, linseed-oil, sal-ammoniac, rubified-vitriol, green-vitriol, wine-lees, borax) | Dark chiaroscuro |
 | **Material** | 18 (3 starter + 15 draft) | TBD |
 | **Buyer** | 54 (18 textile 2-star + 18 ceramic 3-star + 18 painting 4-star) | Gold/ornate |
-| **Total** | **120 unique card faces** | |
+| **Total** | **123 unique card faces** | |
 
 ## Pipeline
 
