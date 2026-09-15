@@ -293,6 +293,27 @@ DYE_CARDS = [
         "touchup_color_desc": "ash grey",
         "art": "Pale, clear lye poured from an earthenware jug into three shallow basins on a workshop table. In the first, crimson settles out of dissolved wool shearings; in the second, yellow blooms from boiled weld; in the third, a kneaded ball of wax and resin bleeds ultramarine blue. A dripping ash-hopper stands in the background.",
     },
+    {
+        "name": "sinopia", "title": "Sinopia", "ability": "sell",
+        "pigments": ["red-pigment", "red-pigment", "red-pigment"], "color": (150, 50, 35),
+        "bg_color": "rust red and warm earthy red-brown",
+        "touchup_color_desc": "rust red",
+        "art": "A fresco painter on a wooden scaffold sketches the outline of a great figure across fresh pale plaster in quick rust-red strokes. A pot of red earth paste sits on the plank at his side, and below him an open sack spills dark red lumps of the raw earth across the scaffold boards.",
+    },
+    {
+        "name": "giallorino", "title": "Giallorino", "ability": "sell",
+        "pigments": ["yellow-pigment", "yellow-pigment", "yellow-pigment"], "color": (185, 150, 25),
+        "bg_color": "sunny lemon yellow and glowing furnace gold",
+        "touchup_color_desc": "lemon yellow",
+        "art": "Inside a Murano glasshouse, a glassblower draws a glowing gather of opaque yellow glass from the mouth of the furnace. Cooled cakes of the same sunny yellow glass lie cracked open on a workbench nearby, one fragment ground in a stone mortar to a bright lemon powder.",
+    },
+    {
+        "name": "cornflower", "title": "Cornflower", "ability": "sell",
+        "pigments": ["blue-pigment", "blue-pigment", "blue-pigment"], "color": (60, 90, 170),
+        "bg_color": "bright cornflower blue and pale wheat gold",
+        "touchup_color_desc": "cornflower blue",
+        "art": "Bright blue cornflowers gathered from the edge of a golden wheat field, their petals stripped into a wooden bowl and pressed through linen into a small glass dish of vivid blue juice. At a sunlit desk an illuminator brushes the fresh blue into the petals of a painted flower on a sheet of vellum.",
+    },
 ]
 
 
