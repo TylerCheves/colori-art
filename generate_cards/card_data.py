@@ -330,6 +330,50 @@ DYE_CARDS = [
         "touchup_color_desc": "deep blue-black",
         "art": "Bones packed tight into a sealed clay crucible and raked out of the embers of a low fire, the lid lifted to show them charred through to a dense blue-black. A workman grinds a broken fragment on a stone slab into a soft, deep black powder that catches a faint blue sheen in the firelight.",
     },
+    # Secondary + white experiment -- artwork only. White has no pigment icon,
+    # so each card pairs its secondary with empty-pigment as a placeholder.
+    {
+        "name": "coral", "title": "Coral", "ability": "sell",
+        "pigments": ["orange-pigment", "empty-pigment"], "color": (190, 85, 55),
+        "bg_color": "warm red-orange coral and chalky white",
+        "touchup_color_desc": "warm coral orange",
+        "art": "Branches of red-orange coral heaped in a fisherman's basket on a quay, still wet from the net, a few pale white branches among them. On a workbench a craftsman saws a branch into beads, the cut faces showing dense orange while fine white coral dust gathers beneath the blade.",
+    },
+    {
+        "name": "verde-antico", "title": "Verde Antico", "ability": "sell",
+        "pigments": ["green-pigment", "empty-pigment"], "color": (45, 95, 70),
+        "bg_color": "deep serpentine green and marble white",
+        "touchup_color_desc": "deep serpentine green",
+        "art": "A quarried block of dark green serpentine marble veined through with white, one face polished smooth to show the pattern. A stonecutter works a smaller piece with a toothed chisel, and the marble dust falling from it lies pure white against the green stone.",
+    },
+    {
+        "name": "porphyry", "title": "Porphyry", "ability": "sell",
+        "pigments": ["purple-pigment", "empty-pigment"], "color": (110, 55, 90),
+        "bg_color": "imperial purple stone and pale crystal white",
+        "touchup_color_desc": "imperial purple",
+        "art": "A heavy slab of purple porphyry flecked with pale crystals, worn into a shallow hollow at the center by years of grinding. A painter works a muller across it in slow circles, small heaps of ground color and a scatter of pale stone dust around the polished dip.",
+    },
+    {
+        "name": "minium", "title": "Minium", "ability": "sell",
+        "pigments": ["orange-pigment", "empty-pigment"], "color": (185, 75, 40),
+        "bg_color": "glowing orange-red and chalky lead white",
+        "touchup_color_desc": "orange-red",
+        "art": "Cakes of lead white broken into a shallow iron pan over a low fire, their edges already turning deep orange as the heat works through them. A workman turns the mass with a long rake, half the pan still chalk white, the other half glowing orange-red.",
+    },
+    {
+        "name": "chrysocolla", "title": "Chrysocolla", "ability": "sell",
+        "pigments": ["green-pigment", "empty-pigment"], "color": (30, 115, 100),
+        "bg_color": "blue-green mineral and milky quartz white",
+        "touchup_color_desc": "blue-green",
+        "art": "A broken lump of blue-green mineral threaded through with milky white quartz, split open on a miner's cloth. Chips of it lie sorted into two shallow dishes, one bright green and one clear white, a small hammer set aside beside them.",
+    },
+    {
+        "name": "murex", "title": "Murex", "ability": "sell",
+        "pigments": ["purple-pigment", "empty-pigment"], "color": (95, 45, 110),
+        "bg_color": "deep Tyrian purple and shell white",
+        "touchup_color_desc": "deep Tyrian purple",
+        "art": "A heap of spiny white shells on a dyer's bench by the water, one cracked open with a blade to show the gland inside, its pale liquid already darkening toward violet in the light. A dipped linen strip hangs stained deep purple while emptied shells are ground to a fine white powder in a stone mortar.",
+    },
 ]
 
 
@@ -498,6 +542,18 @@ ACTION_CARDS = [
             "a stack of gold ducats. Beside it a shallow dish holds a pool of the liquid metal, mirroring the "
             "lamplight like polished silver, and a few bright beads that escaped the pour roll loose across "
             "the wood."
+        ),
+    },
+    {
+        "name": "bianco-sangiovanni", "title": "Bianco Sangiovanni",
+        "ability": "destroyCards",
+        "bottom": {"type": "mix", "count": "1"},
+        "bg_color": "chalky lime white, pale grey, and warm lamplit browns",
+        "touchup_color_desc": "white",
+        "art": (
+            "Cakes of slaked lime white drying in rows on a plank, one crumbled into a dish where a fresco "
+            "painter stirs it through a saucer of color, the tone lifting pale as it takes the white. A pail "
+            "of lime putty stands below the bench, its surface skinned over and cracked."
         ),
     },
 ]

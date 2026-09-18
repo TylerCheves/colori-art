@@ -2,20 +2,20 @@
 
 This repository generates the card art for **Colori**, a board game about the
 Renaissance Venice dye trade. The pipeline combines Google's Nano Banana Pro
-image generation API with Pillow-based compositing to produce 126 unique card
+image generation API with Pillow-based compositing to produce 133 unique card
 faces at print-ready resolution (750×1050px, 2.5×3.5in @ 300 DPI).
 
 ## What it produces
 
 | Card type | Count | Visual style |
 |-----------|-------|--------------|
-| Dye       | 41    | White watercolor vignette |
-| Action    | 13    | Dark chiaroscuro |
+| Dye       | 47    | White watercolor vignette |
+| Action    | 14    | Dark chiaroscuro |
 | Material  | 18    | Varies by material |
 | Buyer     | 54    | Gold / ornate |
-| **Total** | **126** | |
+| **Total** | **133** | |
 
-Seventeen dye cards and six action cards are artwork only: their abilities are
+Twenty-three dye cards and seven action cards are artwork only: their abilities are
 not yet modeled, so only their generated backgrounds are meaningful.
 
 Final art is written to `for-colori-web-app/` for consumption by the game

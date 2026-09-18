@@ -10,12 +10,15 @@
 #    7 ingredient dyes: iris, alkanet, buckthorn, lye, sinopia, giallorino,
 #                        cornflower (artwork only)
 #    2 black/white pigments: lead-white, bone-black (artwork only, experimental)
+#    6 secondary+white pigments: coral, verde-antico, porphyry, minium,
+#                        chrysocolla, murex (artwork only, experimental)
 #   18 material cards (3 starter + 15 draft)
-#   13 action cards (chalk starter + alum, cream-of-tartar, gum-arabic, potash,
+#   14 action cards (chalk starter + alum, cream-of-tartar, gum-arabic, potash,
 #                     vinegar, linseed-oil, sal-ammoniac, rubified-vitriol,
-#                     green-vitriol, wine-lees, borax, quicksilver)
+#                     green-vitriol, wine-lees, borax, quicksilver,
+#                     bianco-sangiovanni)
 #   54 buyer cards (18 textile 2-star + 18 ceramic 3-star + 18 painting 4-star)
-#   -- Total: 126 unique card faces
+#   -- Total: 133 unique card faces
 
 card_size: [750, 1050]
 
@@ -517,6 +520,87 @@ dye_cards:
       firelight.
     palette: "deep blue-black, charcoal grey, and warm ember orange"
 
+  # --- Secondary + white experiment (artwork only, white has no icon yet) ---
+
+  - name: coral
+    title: Coral
+    ability: TBD
+    pigments: [orange, empty]
+    title_color: [190, 85, 55]
+    copies_in_deck: 0
+    art: >
+      Branches of red-orange coral heaped in a fisherman's basket on a quay,
+      still wet from the net, a few pale white branches among them. On a
+      workbench a craftsman saws a branch into beads, the cut faces showing
+      dense orange while fine white coral dust gathers beneath the blade.
+    palette: "warm red-orange coral and chalky white"
+
+  - name: verde-antico
+    title: Verde Antico
+    ability: TBD
+    pigments: [green, empty]
+    title_color: [45, 95, 70]
+    copies_in_deck: 0
+    art: >
+      A quarried block of dark green serpentine marble veined through with
+      white, one face polished smooth to show the pattern. A stonecutter
+      works a smaller piece with a toothed chisel, and the marble dust
+      falling from it lies pure white against the green stone.
+    palette: "deep serpentine green and marble white"
+
+  - name: porphyry
+    title: Porphyry
+    ability: TBD
+    pigments: [purple, empty]
+    title_color: [110, 55, 90]
+    copies_in_deck: 0
+    art: >
+      A heavy slab of purple porphyry flecked with pale crystals, worn into
+      a shallow hollow at the center by years of grinding. A painter works a
+      muller across it in slow circles, small heaps of ground color and a
+      scatter of pale stone dust around the polished dip.
+    palette: "imperial purple stone and pale crystal white"
+
+  - name: minium
+    title: Minium
+    ability: TBD
+    pigments: [orange, empty]
+    title_color: [185, 75, 40]
+    copies_in_deck: 0
+    art: >
+      Cakes of lead white broken into a shallow iron pan over a low fire,
+      their edges already turning deep orange as the heat works through
+      them. A workman turns the mass with a long rake, half the pan still
+      chalk white, the other half glowing orange-red.
+    palette: "glowing orange-red and chalky lead white"
+
+  - name: chrysocolla
+    title: Chrysocolla
+    ability: TBD
+    pigments: [green, empty]
+    title_color: [30, 115, 100]
+    copies_in_deck: 0
+    art: >
+      A broken lump of blue-green mineral threaded through with milky white
+      quartz, split open on a miner's cloth. Chips of it lie sorted into two
+      shallow dishes, one bright green and one clear white, a small hammer
+      set aside beside them.
+    palette: "blue-green mineral and milky quartz white"
+
+  - name: murex
+    title: Murex
+    ability: TBD
+    pigments: [purple, empty]
+    title_color: [95, 45, 110]
+    copies_in_deck: 0
+    art: >
+      A heap of spiny white shells on a dyer's bench by the water, one
+      cracked open with a blade to show the gland inside, its pale liquid
+      already darkening toward violet in the light. A dipped linen strip
+      hangs stained deep purple while emptied shells are ground to a fine
+      white powder in a stone mortar.
+    palette: "deep Tyrian purple and shell white"
+
 # ──────────────────────────────────────────────────────────────────
 # Material Cards (18 total: 3 starter + 15 draft)
 # ──────────────────────────────────────────────────────────────────
@@ -914,6 +998,19 @@ action_cards:
       like polished silver, and a few bright beads that escaped the pour
       roll loose across the wood.
     palette: "mirror-bright silver, warm gold, and deep lamplit browns"
+
+  - name: bianco-sangiovanni
+    title: Bianco Sangiovanni
+    copies_in_deck: 0
+    bottom:
+      type: mix
+      count: "1"
+    art: >
+      Cakes of slaked lime white drying in rows on a plank, one crumbled
+      into a dish where a fresco painter stirs it through a saucer of color,
+      the tone lifting pale as it takes the white. A pail of lime putty
+      stands below the bench, its surface skinned over and cracked.
+    palette: "chalky lime white, pale grey, and warm lamplit browns"
 
 # ──────────────────────────────────────────────────────────────────
 # Buyer Cards (54 total: 18 textile + 18 ceramic + 18 painting)
