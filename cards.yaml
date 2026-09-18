@@ -9,12 +9,13 @@
 #    8 mineral/resin pigments (artwork only, no tier assigned)
 #    7 ingredient dyes: iris, alkanet, buckthorn, lye, sinopia, giallorino,
 #                        cornflower (artwork only)
+#    2 black/white pigments: lead-white, bone-black (artwork only, experimental)
 #   18 material cards (3 starter + 15 draft)
 #   13 action cards (chalk starter + alum, cream-of-tartar, gum-arabic, potash,
 #                     vinegar, linseed-oil, sal-ammoniac, rubified-vitriol,
 #                     green-vitriol, wine-lees, borax, quicksilver)
 #   54 buyer cards (18 textile 2-star + 18 ceramic 3-star + 18 painting 4-star)
-#   -- Total: 124 unique card faces
+#   -- Total: 126 unique card faces
 
 card_size: [750, 1050]
 
@@ -485,6 +486,36 @@ dye_cards:
       illuminator brushes the fresh blue into the petals of a painted flower
       on a sheet of vellum.
     palette: "bright cornflower blue and pale wheat gold"
+
+  # --- Black and white experiment (artwork only, no pigment icons yet) ---
+
+  - name: lead-white
+    title: Lead White
+    ability: TBD
+    pigments: [empty]
+    title_color: [120, 112, 104]
+    copies_in_deck: 0
+    art: >
+      Coils of lead unwound from earthenware pots buried in spent tan bark,
+      their surfaces thick with a white crust that cracks and flakes into a
+      tub of water below. A workman beats the flakes loose with a wooden
+      mallet while washed cakes of the finished white dry in rows on a
+      slatted rack.
+    palette: "chalky lead white, pale grey shadows, and warm cream"
+
+  - name: bone-black
+    title: Bone Black
+    ability: TBD
+    pigments: [empty]
+    title_color: [40, 38, 42]
+    copies_in_deck: 0
+    art: >
+      Bones packed tight into a sealed clay crucible and raked out of the
+      embers of a low fire, the lid lifted to show them charred through to a
+      dense blue-black. A workman grinds a broken fragment on a stone slab
+      into a soft, deep black powder that catches a faint blue sheen in the
+      firelight.
+    palette: "deep blue-black, charcoal grey, and warm ember orange"
 
 # ──────────────────────────────────────────────────────────────────
 # Material Cards (18 total: 3 starter + 15 draft)

@@ -314,6 +314,22 @@ DYE_CARDS = [
         "touchup_color_desc": "cornflower blue",
         "art": "Bright blue cornflowers gathered from the edge of a golden wheat field, their petals stripped into a wooden bowl and pressed through linen into a small glass dish of vivid blue juice. At a sunlit desk an illuminator brushes the fresh blue into the petals of a painted flower on a sheet of vellum.",
     },
+    # Black and white experiment -- artwork only. There are no black or white
+    # pigment icons, so these carry empty-pigment as a placeholder.
+    {
+        "name": "lead-white", "title": "Lead White", "ability": "sell",
+        "pigments": ["empty-pigment"], "color": (120, 112, 104),
+        "bg_color": "chalky lead white, pale grey shadows, and warm cream",
+        "touchup_color_desc": "warm pale grey",
+        "art": "Coils of lead unwound from earthenware pots buried in spent tan bark, their surfaces thick with a white crust that cracks and flakes into a tub of water below. A workman beats the flakes loose with a wooden mallet while washed cakes of the finished white dry in rows on a slatted rack.",
+    },
+    {
+        "name": "bone-black", "title": "Bone Black", "ability": "sell",
+        "pigments": ["empty-pigment"], "color": (40, 38, 42),
+        "bg_color": "deep blue-black, charcoal grey, and warm ember orange",
+        "touchup_color_desc": "deep blue-black",
+        "art": "Bones packed tight into a sealed clay crucible and raked out of the embers of a low fire, the lid lifted to show them charred through to a dense blue-black. A workman grinds a broken fragment on a stone slab into a soft, deep black powder that catches a faint blue sheen in the firelight.",
+    },
 ]
 
 
