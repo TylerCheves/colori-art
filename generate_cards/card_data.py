@@ -374,6 +374,36 @@ DYE_CARDS = [
         "touchup_color_desc": "deep Tyrian purple",
         "art": "A heap of spiny white shells on a dyer's bench by the water, one cracked open with a blade to show the gland inside, its pale liquid already darkening toward violet in the light. A dipped linen strip hangs stained deep purple while emptied shells are ground to a fine white powder in a stone mortar.",
     },
+    # Single-color experiment -- artwork only. Gypsum's white has no pigment
+    # icon, so it carries empty-pigment as a placeholder.
+    {
+        "name": "armenian-bole", "title": "Armenian Bole", "ability": "sell",
+        "pigments": ["orange-pigment"], "color": (165, 75, 50),
+        "bg_color": "warm orange-red clay and burnished gold",
+        "touchup_color_desc": "warm orange-red",
+        "art": "Smooth cakes of fine orange-red clay stacked beside a gilder's bench, one broken open to show a dense even core. A gilder brushes the wetted bole across a carved panel and lays gold leaf over it, the warm red glowing through where the leaf thins at an edge.",
+    },
+    {
+        "name": "copper", "title": "Copper", "ability": "sell",
+        "pigments": ["green-pigment"], "color": (60, 110, 80),
+        "bg_color": "bright copper red-gold and blue-green patina",
+        "touchup_color_desc": "blue-green patina",
+        "art": "Beaten sheets and rough ingots of copper stacked on a quay under a lifted tarpaulin, one sheet tilted to show a spreading blue-green bloom along its damp edge. A porter heaves an ingot onto a barrow while a craftsman scrapes green crust from an older sheet into a horn cup.",
+    },
+    {
+        "name": "mulberry", "title": "Mulberry", "ability": "sell",
+        "pigments": ["purple-pigment"], "color": (95, 40, 85),
+        "bg_color": "deep purple-black berry juice and pale silk sheen",
+        "touchup_color_desc": "deep purple",
+        "art": "Dark mulberries crushed through a cloth into an earthenware bowl, the juice running almost black where it pools deepest. Stacked trays of mulberry leaves for the silkworms stand behind, and a length of pale silk trails across the bench with one end already stained violet.",
+    },
+    {
+        "name": "gypsum", "title": "Gypsum", "ability": "sell",
+        "pigments": ["empty-pigment"], "color": (120, 118, 112),
+        "bg_color": "chalky gypsum white and pale warm grey",
+        "touchup_color_desc": "pale warm grey",
+        "art": "Slabs of pale gypsum split open on a workshop floor, their broken faces showing a fibrous white grain. A workman draws burnt gypsum from a low kiln and slakes it in a tub of water until the slurry thickens white, while smooth dried panels lean against the wall.",
+    },
 ]
 
 
@@ -554,6 +584,44 @@ ACTION_CARDS = [
             "Cakes of slaked lime white drying in rows on a plank, one crumbled into a dish where a fresco "
             "painter stirs it through a saucer of color, the tone lifting pale as it takes the white. A pail "
             "of lime putty stands below the bench, its surface skinned over and cracked."
+        ),
+    },
+    # Artwork only. Aqua Fortis splits a color into its components; compose has
+    # no icon for that on an action card, so its bottom carries swap instead.
+    {
+        "name": "walnut-oil", "title": "Walnut Oil",
+        "ability": "destroyCards",
+        "bottom": {"type": "mix", "count": "2"},
+        "bg_color": "pale green-gold oil, warm nut browns, and deep shadow",
+        "touchup_color_desc": "pale green-gold",
+        "art": (
+            "Shelled walnuts crushed under a heavy wooden screw press, clear green-gold oil running along a "
+            "channel into a stoneware jar. A painter tips a little onto a slab and works it through a heap of "
+            "ground pigment with a broad knife until the color turns glossy and dark."
+        ),
+    },
+    {
+        "name": "oak-galls", "title": "Oak Galls",
+        "ability": "destroyCards",
+        "bottom": {"type": "draw_cards", "count": "+2"},
+        "bg_color": "warm tan gall-nuts, iron-black ink, and deep lamplit browns",
+        "touchup_color_desc": "iron-black",
+        "art": (
+            "Round tan gall-nuts picked from an oak branch, several cracked open to show their pithy centers, "
+            "steeping in a jar of darkening liquor. A clerk dips a quill and draws a clean rule down a blank "
+            "sheet, a stack of fresh sheets waiting at his elbow."
+        ),
+    },
+    {
+        "name": "aqua-fortis", "title": "Aqua Fortis",
+        "ability": "destroyCards",
+        "bottom": {"type": "swap"},
+        "bg_color": "corrosive green-yellow fumes, tarnished silver, and dark shadow",
+        "touchup_color_desc": "pale green-yellow",
+        "art": (
+            "A glass flask of aqua fortis on an iron stand, thin yellow fumes curling from its mouth as a "
+            "goldsmith lowers in a granule of alloy. The metal seethes and clouds the liquid while a bead of "
+            "pure gold settles clean at the bottom, parted from the silver it came in with."
         ),
     },
 ]
