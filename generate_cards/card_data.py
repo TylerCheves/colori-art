@@ -624,6 +624,22 @@ ACTION_CARDS = [
             "pure gold settles clean at the bottom, parted from the silver it came in with."
         ),
     },
+    # Artwork only. Gondola's ability is not written yet, so its bottom is a
+    # coin placeholder -- compose needs something to draw if it is ever run.
+    {
+        "name": "gondola", "title": "Gondola",
+        "ability": "destroyCards",
+        "bottom": {"type": "coin"},
+        "bg_color": "deep canal black-greens, lamplit gold, and wet dark timber",
+        "touchup_color_desc": "warm lamplit gold",
+        "art": (
+            "A black gondola nosed up to a workshop's canal-side door, its upcurved iron prow catching "
+            "the lamplight. A gondolier braces at the stern with his oar while two porters pass down "
+            "bales of dyed cloth and a keg of dye, one lantern swinging from the ferro. The water "
+            "beneath the hull lies black and still, holding only the lantern's reflection and a few "
+            "streaks of spilled color on the wet stone landing."
+        ),
+    },
 ]
 
 

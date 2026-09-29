@@ -15,12 +15,13 @@
 #    4 single-color cards: armenian-bole, copper, mulberry, gypsum
 #                        (artwork only, experimental)
 #   18 material cards (3 starter + 15 draft)
-#   17 action cards (chalk starter + alum, cream-of-tartar, gum-arabic, potash,
+#   18 action cards (chalk starter + alum, cream-of-tartar, gum-arabic, potash,
 #                     vinegar, linseed-oil, sal-ammoniac, rubified-vitriol,
 #                     green-vitriol, wine-lees, borax, quicksilver,
-#                     bianco-sangiovanni, walnut-oil, oak-galls, aqua-fortis)
+#                     bianco-sangiovanni, walnut-oil, oak-galls, aqua-fortis,
+#                     gondola)
 #   54 buyer cards (18 textile 2-star + 18 ceramic 3-star + 18 painting 4-star)
-#   -- Total: 140 unique card faces
+#   -- Total: 141 unique card faces
 
 card_size: [750, 1050]
 
@@ -971,6 +972,31 @@ action_cards:
       the door.
     palette: "coarse grey-white, warm earth tones, and muted browns"
 
+  - name: vinegar
+    title: Vinegar
+    copies_in_deck: 4
+    bottom:
+      type: swap
+    art: >
+      A row of dark glass bottles filled with amber and reddish vinegar on a
+      wooden shelf in a Venice dye workshop. One bottle is uncorked, its
+      sharp contents being poured into a shallow ceramic dish alongside
+      soaking fabric. Copper funnels and stained linen cloths hang nearby.
+    palette: "amber liquid tones, warm copper, and dark glass greens"
+
+  - name: linseed-oil
+    title: Linseed Oil
+    copies_in_deck: 4
+    bottom:
+      type: mix
+      count: "2"
+    art: >
+      A heavy dark glass bottle of golden linseed oil being poured into a
+      shallow ceramic dish, the thick amber liquid catching warm candlelight.
+      Flax seeds are scattered on the workbench beside a small hand press.
+      Stained rags and brushes lie nearby in a Venice workshop.
+    palette: "warm golden-amber oil, dark glass bottles, rich honey tones"
+
   # --- Ingredient actions (artwork only, not yet in the deck) ---
   # Wine Lees and Borax also workshop once; Sal Ammoniac workshops the same
   # card twice. `bottom` shows only the part compose can draw.
@@ -1109,6 +1135,22 @@ action_cards:
       The metal seethes and clouds the liquid while a bead of pure gold
       settles clean at the bottom, parted from the silver it came in with.
     palette: "corrosive green-yellow fumes, tarnished silver, and dark shadow"
+
+  # Gondola's ability is not written yet; `bottom` is a coin placeholder.
+
+  - name: gondola
+    title: Gondola
+    copies_in_deck: 0
+    bottom:
+      type: coin
+    art: >
+      A black gondola nosed up to a workshop's canal-side door, its upcurved
+      iron prow catching the lamplight. A gondolier braces at the stern with
+      his oar while two porters pass down bales of dyed cloth and a keg of
+      dye, one lantern swinging from the ferro. The water beneath the hull
+      lies black and still, holding only the lantern's reflection and a few
+      streaks of spilled color on the wet stone landing.
+    palette: "deep canal black-greens, lamplit gold, and wet dark timber"
 
 # ──────────────────────────────────────────────────────────────────
 # Buyer Cards (54 total: 18 textile + 18 ceramic + 18 painting)
