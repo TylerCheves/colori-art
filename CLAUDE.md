@@ -8,7 +8,7 @@ Board game card generator for Colori (Renaissance Venice dye trade). Uses Google
 
 ```bash
 pip install -e .
-export GOOGLE_API_KEY="AIzaSyAzVe44HEWckQJnZAjCHL4m4g_fqu_HFqg"
+export GOOGLE_API_KEY="<your-key>"
 
 # Run the full pipeline
 python -m generate_cards
