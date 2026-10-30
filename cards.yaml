@@ -9,12 +9,19 @@
 #    8 mineral/resin pigments (artwork only, no tier assigned)
 #    7 ingredient dyes: iris, alkanet, buckthorn, lye, sinopia, giallorino,
 #                        cornflower (artwork only)
+#    2 black/white pigments: lead-white, bone-black (artwork only, experimental)
+#    6 secondary+white pigments: coral, verde-antico, porphyry, minium,
+#                        chrysocolla, murex (artwork only, experimental)
+#    4 single-color cards: armenian-bole, copper, mulberry, gypsum
+#                        (artwork only, experimental)
 #   18 material cards (3 starter + 15 draft)
-#   13 action cards (chalk starter + alum, cream-of-tartar, gum-arabic, potash,
+#   18 action cards (chalk starter + alum, cream-of-tartar, gum-arabic, potash,
 #                     vinegar, linseed-oil, sal-ammoniac, rubified-vitriol,
-#                     green-vitriol, wine-lees, borax, quicksilver)
+#                     green-vitriol, wine-lees, borax, quicksilver,
+#                     bianco-sangiovanni, walnut-oil, oak-galls, aqua-fortis,
+#                     gondola)
 #   54 buyer cards (18 textile 2-star + 18 ceramic 3-star + 18 painting 4-star)
-#   -- Total: 124 unique card faces
+#   -- Total: 141 unique card faces
 
 card_size: [750, 1050]
 
@@ -486,6 +493,172 @@ dye_cards:
       on a sheet of vellum.
     palette: "bright cornflower blue and pale wheat gold"
 
+  # --- Black and white experiment (artwork only, no pigment icons yet) ---
+
+  - name: lead-white
+    title: Lead White
+    ability: TBD
+    pigments: [empty]
+    title_color: [120, 112, 104]
+    copies_in_deck: 0
+    art: >
+      Coils of lead unwound from earthenware pots buried in spent tan bark,
+      their surfaces thick with a white crust that cracks and flakes into a
+      tub of water below. A workman beats the flakes loose with a wooden
+      mallet while washed cakes of the finished white dry in rows on a
+      slatted rack.
+    palette: "chalky lead white, pale grey shadows, and warm cream"
+
+  - name: bone-black
+    title: Bone Black
+    ability: TBD
+    pigments: [empty]
+    title_color: [40, 38, 42]
+    copies_in_deck: 0
+    art: >
+      Bones packed tight into a sealed clay crucible and raked out of the
+      embers of a low fire, the lid lifted to show them charred through to a
+      dense blue-black. A workman grinds a broken fragment on a stone slab
+      into a soft, deep black powder that catches a faint blue sheen in the
+      firelight.
+    palette: "deep blue-black, charcoal grey, and warm ember orange"
+
+  # --- Secondary + white experiment (artwork only, white has no icon yet) ---
+
+  - name: coral
+    title: Coral
+    ability: TBD
+    pigments: [orange, empty]
+    title_color: [190, 85, 55]
+    copies_in_deck: 0
+    art: >
+      Branches of red-orange coral heaped in a fisherman's basket on a quay,
+      still wet from the net, a few pale white branches among them. On a
+      workbench a craftsman saws a branch into beads, the cut faces showing
+      dense orange while fine white coral dust gathers beneath the blade.
+    palette: "warm red-orange coral and chalky white"
+
+  - name: verde-antico
+    title: Verde Antico
+    ability: TBD
+    pigments: [green, empty]
+    title_color: [45, 95, 70]
+    copies_in_deck: 0
+    art: >
+      A quarried block of dark green serpentine marble veined through with
+      white, one face polished smooth to show the pattern. A stonecutter
+      works a smaller piece with a toothed chisel, and the marble dust
+      falling from it lies pure white against the green stone.
+    palette: "deep serpentine green and marble white"
+
+  - name: porphyry
+    title: Porphyry
+    ability: TBD
+    pigments: [purple, empty]
+    title_color: [110, 55, 90]
+    copies_in_deck: 0
+    art: >
+      A heavy slab of purple porphyry flecked with pale crystals, worn into
+      a shallow hollow at the center by years of grinding. A painter works a
+      muller across it in slow circles, small heaps of ground color and a
+      scatter of pale stone dust around the polished dip.
+    palette: "imperial purple stone and pale crystal white"
+
+  - name: minium
+    title: Minium
+    ability: TBD
+    pigments: [orange, empty]
+    title_color: [185, 75, 40]
+    copies_in_deck: 0
+    art: >
+      Cakes of lead white broken into a shallow iron pan over a low fire,
+      their edges already turning deep orange as the heat works through
+      them. A workman turns the mass with a long rake, half the pan still
+      chalk white, the other half glowing orange-red.
+    palette: "glowing orange-red and chalky lead white"
+
+  - name: chrysocolla
+    title: Chrysocolla
+    ability: TBD
+    pigments: [green, empty]
+    title_color: [30, 115, 100]
+    copies_in_deck: 0
+    art: >
+      A broken lump of blue-green mineral threaded through with milky white
+      quartz, split open on a miner's cloth. Chips of it lie sorted into two
+      shallow dishes, one bright green and one clear white, a small hammer
+      set aside beside them.
+    palette: "blue-green mineral and milky quartz white"
+
+  - name: murex
+    title: Murex
+    ability: TBD
+    pigments: [purple, empty]
+    title_color: [95, 45, 110]
+    copies_in_deck: 0
+    art: >
+      A heap of spiny white shells on a dyer's bench by the water, one
+      cracked open with a blade to show the gland inside, its pale liquid
+      already darkening toward violet in the light. A dipped linen strip
+      hangs stained deep purple while emptied shells are ground to a fine
+      white powder in a stone mortar.
+    palette: "deep Tyrian purple and shell white"
+
+  # --- Single-color experiment (artwork only, white has no icon yet) ---
+
+  - name: armenian-bole
+    title: Armenian Bole
+    ability: TBD
+    pigments: [orange]
+    title_color: [165, 75, 50]
+    copies_in_deck: 0
+    art: >
+      Smooth cakes of fine orange-red clay stacked beside a gilder's bench,
+      one broken open to show a dense even core. A gilder brushes the wetted
+      bole across a carved panel and lays gold leaf over it, the warm red
+      glowing through where the leaf thins at an edge.
+    palette: "warm orange-red clay and burnished gold"
+
+  - name: copper
+    title: Copper
+    ability: TBD
+    pigments: [green]
+    title_color: [60, 110, 80]
+    copies_in_deck: 0
+    art: >
+      Beaten sheets and rough ingots of copper stacked on a quay under a
+      lifted tarpaulin, one sheet tilted to show a spreading blue-green
+      bloom along its damp edge. A porter heaves an ingot onto a barrow
+      while a craftsman scrapes green crust from an older sheet into a horn
+      cup.
+    palette: "bright copper red-gold and blue-green patina"
+
+  - name: mulberry
+    title: Mulberry
+    ability: TBD
+    pigments: [purple]
+    title_color: [95, 40, 85]
+    copies_in_deck: 0
+    art: >
+      Dark mulberries crushed through a cloth into an earthenware bowl, the
+      juice running almost black where it pools deepest. Stacked trays of
+      mulberry leaves for the silkworms stand behind, and a length of pale
+      silk trails across the bench with one end already stained violet.
+    palette: "deep purple-black berry juice and pale silk sheen"
+
+  - name: gypsum
+    title: Gypsum
+    ability: TBD
+    pigments: [empty]
+    title_color: [120, 118, 112]
+    copies_in_deck: 0
+    art: >
+      Slabs of pale gypsum split open on a workshop floor, their broken
+      faces showing a fibrous white grain. A workman draws burnt gypsum from
+      a low kiln and slakes it in a tub of water until the slurry thickens
+      white, while smooth dried panels lean against the wall.
+    palette: "chalky gypsum white and pale warm grey"
+
 # ──────────────────────────────────────────────────────────────────
 # Material Cards (18 total: 3 starter + 15 draft)
 # ──────────────────────────────────────────────────────────────────
@@ -799,6 +972,31 @@ action_cards:
       the door.
     palette: "coarse grey-white, warm earth tones, and muted browns"
 
+  - name: vinegar
+    title: Vinegar
+    copies_in_deck: 4
+    bottom:
+      type: swap
+    art: >
+      A row of dark glass bottles filled with amber and reddish vinegar on a
+      wooden shelf in a Venice dye workshop. One bottle is uncorked, its
+      sharp contents being poured into a shallow ceramic dish alongside
+      soaking fabric. Copper funnels and stained linen cloths hang nearby.
+    palette: "amber liquid tones, warm copper, and dark glass greens"
+
+  - name: linseed-oil
+    title: Linseed Oil
+    copies_in_deck: 4
+    bottom:
+      type: mix
+      count: "2"
+    art: >
+      A heavy dark glass bottle of golden linseed oil being poured into a
+      shallow ceramic dish, the thick amber liquid catching warm candlelight.
+      Flax seeds are scattered on the workbench beside a small hand press.
+      Stained rags and brushes lie nearby in a Venice workshop.
+    palette: "warm golden-amber oil, dark glass bottles, rich honey tones"
+
   # --- Ingredient actions (artwork only, not yet in the deck) ---
   # Wine Lees and Borax also workshop once; Sal Ammoniac workshops the same
   # card twice. `bottom` shows only the part compose can draw.
@@ -883,6 +1081,76 @@ action_cards:
       like polished silver, and a few bright beads that escaped the pour
       roll loose across the wood.
     palette: "mirror-bright silver, warm gold, and deep lamplit browns"
+
+  - name: bianco-sangiovanni
+    title: Bianco Sangiovanni
+    copies_in_deck: 0
+    bottom:
+      type: mix
+      count: "1"
+    art: >
+      Cakes of slaked lime white drying in rows on a plank, one crumbled
+      into a dish where a fresco painter stirs it through a saucer of color,
+      the tone lifting pale as it takes the white. A pail of lime putty
+      stands below the bench, its surface skinned over and cracked.
+    palette: "chalky lime white, pale grey, and warm lamplit browns"
+
+  # Aqua Fortis splits a color; compose has no icon for that, so its bottom
+  # carries swap instead.
+
+  - name: walnut-oil
+    title: Walnut Oil
+    copies_in_deck: 0
+    bottom:
+      type: mix
+      count: "2"
+    art: >
+      Shelled walnuts crushed under a heavy wooden screw press, clear green-
+      gold oil running along a channel into a stoneware jar. A painter tips
+      a little onto a slab and works it through a heap of ground pigment
+      with a broad knife until the color turns glossy and dark.
+    palette: "pale green-gold oil, warm nut browns, and deep shadow"
+
+  - name: oak-galls
+    title: Oak Galls
+    copies_in_deck: 0
+    bottom:
+      type: draw_cards
+      count: "+2"
+    art: >
+      Round tan gall-nuts picked from an oak branch, several cracked open to
+      show their pithy centers, steeping in a jar of darkening liquor. A
+      clerk dips a quill and draws a clean rule down a blank sheet, a stack
+      of fresh sheets waiting at his elbow.
+    palette: "warm tan gall-nuts, iron-black ink, and deep lamplit browns"
+
+  - name: aqua-fortis
+    title: Aqua Fortis
+    copies_in_deck: 0
+    bottom:
+      type: swap
+    art: >
+      A glass flask of aqua fortis on an iron stand, thin yellow fumes
+      curling from its mouth as a goldsmith lowers in a granule of alloy.
+      The metal seethes and clouds the liquid while a bead of pure gold
+      settles clean at the bottom, parted from the silver it came in with.
+    palette: "corrosive green-yellow fumes, tarnished silver, and dark shadow"
+
+  # Gondola's ability is not written yet; `bottom` is a coin placeholder.
+
+  - name: gondola
+    title: Gondola
+    copies_in_deck: 0
+    bottom:
+      type: coin
+    art: >
+      A black gondola nosed up to a workshop's canal-side door, its upcurved
+      iron prow catching the lamplight. A gondolier braces at the stern with
+      his oar while two porters pass down bales of dyed cloth and a keg of
+      dye, one lantern swinging from the ferro. The water beneath the hull
+      lies black and still, holding only the lantern's reflection and a few
+      streaks of spilled color on the wet stone landing.
+    palette: "deep canal black-greens, lamplit gold, and wet dark timber"
 
 # ──────────────────────────────────────────────────────────────────
 # Buyer Cards (54 total: 18 textile + 18 ceramic + 18 painting)

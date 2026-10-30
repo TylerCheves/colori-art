@@ -314,6 +314,96 @@ DYE_CARDS = [
         "touchup_color_desc": "cornflower blue",
         "art": "Bright blue cornflowers gathered from the edge of a golden wheat field, their petals stripped into a wooden bowl and pressed through linen into a small glass dish of vivid blue juice. At a sunlit desk an illuminator brushes the fresh blue into the petals of a painted flower on a sheet of vellum.",
     },
+    # Black and white experiment -- artwork only. There are no black or white
+    # pigment icons, so these carry empty-pigment as a placeholder.
+    {
+        "name": "lead-white", "title": "Lead White", "ability": "sell",
+        "pigments": ["empty-pigment"], "color": (120, 112, 104),
+        "bg_color": "chalky lead white, pale grey shadows, and warm cream",
+        "touchup_color_desc": "warm pale grey",
+        "art": "Coils of lead unwound from earthenware pots buried in spent tan bark, their surfaces thick with a white crust that cracks and flakes into a tub of water below. A workman beats the flakes loose with a wooden mallet while washed cakes of the finished white dry in rows on a slatted rack.",
+    },
+    {
+        "name": "bone-black", "title": "Bone Black", "ability": "sell",
+        "pigments": ["empty-pigment"], "color": (40, 38, 42),
+        "bg_color": "deep blue-black, charcoal grey, and warm ember orange",
+        "touchup_color_desc": "deep blue-black",
+        "art": "Bones packed tight into a sealed clay crucible and raked out of the embers of a low fire, the lid lifted to show them charred through to a dense blue-black. A workman grinds a broken fragment on a stone slab into a soft, deep black powder that catches a faint blue sheen in the firelight.",
+    },
+    # Secondary + white experiment -- artwork only. White has no pigment icon,
+    # so each card pairs its secondary with empty-pigment as a placeholder.
+    {
+        "name": "coral", "title": "Coral", "ability": "sell",
+        "pigments": ["orange-pigment", "empty-pigment"], "color": (190, 85, 55),
+        "bg_color": "warm red-orange coral and chalky white",
+        "touchup_color_desc": "warm coral orange",
+        "art": "Branches of red-orange coral heaped in a fisherman's basket on a quay, still wet from the net, a few pale white branches among them. On a workbench a craftsman saws a branch into beads, the cut faces showing dense orange while fine white coral dust gathers beneath the blade.",
+    },
+    {
+        "name": "verde-antico", "title": "Verde Antico", "ability": "sell",
+        "pigments": ["green-pigment", "empty-pigment"], "color": (45, 95, 70),
+        "bg_color": "deep serpentine green and marble white",
+        "touchup_color_desc": "deep serpentine green",
+        "art": "A quarried block of dark green serpentine marble veined through with white, one face polished smooth to show the pattern. A stonecutter works a smaller piece with a toothed chisel, and the marble dust falling from it lies pure white against the green stone.",
+    },
+    {
+        "name": "porphyry", "title": "Porphyry", "ability": "sell",
+        "pigments": ["purple-pigment", "empty-pigment"], "color": (110, 55, 90),
+        "bg_color": "imperial purple stone and pale crystal white",
+        "touchup_color_desc": "imperial purple",
+        "art": "A heavy slab of purple porphyry flecked with pale crystals, worn into a shallow hollow at the center by years of grinding. A painter works a muller across it in slow circles, small heaps of ground color and a scatter of pale stone dust around the polished dip.",
+    },
+    {
+        "name": "minium", "title": "Minium", "ability": "sell",
+        "pigments": ["orange-pigment", "empty-pigment"], "color": (185, 75, 40),
+        "bg_color": "glowing orange-red and chalky lead white",
+        "touchup_color_desc": "orange-red",
+        "art": "Cakes of lead white broken into a shallow iron pan over a low fire, their edges already turning deep orange as the heat works through them. A workman turns the mass with a long rake, half the pan still chalk white, the other half glowing orange-red.",
+    },
+    {
+        "name": "chrysocolla", "title": "Chrysocolla", "ability": "sell",
+        "pigments": ["green-pigment", "empty-pigment"], "color": (30, 115, 100),
+        "bg_color": "blue-green mineral and milky quartz white",
+        "touchup_color_desc": "blue-green",
+        "art": "A broken lump of blue-green mineral threaded through with milky white quartz, split open on a miner's cloth. Chips of it lie sorted into two shallow dishes, one bright green and one clear white, a small hammer set aside beside them.",
+    },
+    {
+        "name": "murex", "title": "Murex", "ability": "sell",
+        "pigments": ["purple-pigment", "empty-pigment"], "color": (95, 45, 110),
+        "bg_color": "deep Tyrian purple and shell white",
+        "touchup_color_desc": "deep Tyrian purple",
+        "art": "A heap of spiny white shells on a dyer's bench by the water, one cracked open with a blade to show the gland inside, its pale liquid already darkening toward violet in the light. A dipped linen strip hangs stained deep purple while emptied shells are ground to a fine white powder in a stone mortar.",
+    },
+    # Single-color experiment -- artwork only. Gypsum's white has no pigment
+    # icon, so it carries empty-pigment as a placeholder.
+    {
+        "name": "armenian-bole", "title": "Armenian Bole", "ability": "sell",
+        "pigments": ["orange-pigment"], "color": (165, 75, 50),
+        "bg_color": "warm orange-red clay and burnished gold",
+        "touchup_color_desc": "warm orange-red",
+        "art": "Smooth cakes of fine orange-red clay stacked beside a gilder's bench, one broken open to show a dense even core. A gilder brushes the wetted bole across a carved panel and lays gold leaf over it, the warm red glowing through where the leaf thins at an edge.",
+    },
+    {
+        "name": "copper", "title": "Copper", "ability": "sell",
+        "pigments": ["green-pigment"], "color": (60, 110, 80),
+        "bg_color": "bright copper red-gold and blue-green patina",
+        "touchup_color_desc": "blue-green patina",
+        "art": "Beaten sheets and rough ingots of copper stacked on a quay under a lifted tarpaulin, one sheet tilted to show a spreading blue-green bloom along its damp edge. A porter heaves an ingot onto a barrow while a craftsman scrapes green crust from an older sheet into a horn cup.",
+    },
+    {
+        "name": "mulberry", "title": "Mulberry", "ability": "sell",
+        "pigments": ["purple-pigment"], "color": (95, 40, 85),
+        "bg_color": "deep purple-black berry juice and pale silk sheen",
+        "touchup_color_desc": "deep purple",
+        "art": "Dark mulberries crushed through a cloth into an earthenware bowl, the juice running almost black where it pools deepest. Stacked trays of mulberry leaves for the silkworms stand behind, and a length of pale silk trails across the bench with one end already stained violet.",
+    },
+    {
+        "name": "gypsum", "title": "Gypsum", "ability": "sell",
+        "pigments": ["empty-pigment"], "color": (120, 118, 112),
+        "bg_color": "chalky gypsum white and pale warm grey",
+        "touchup_color_desc": "pale warm grey",
+        "art": "Slabs of pale gypsum split open on a workshop floor, their broken faces showing a fibrous white grain. A workman draws burnt gypsum from a low kiln and slakes it in a tub of water until the slurry thickens white, while smooth dried panels lean against the wall.",
+    },
 ]
 
 
@@ -482,6 +572,72 @@ ACTION_CARDS = [
             "a stack of gold ducats. Beside it a shallow dish holds a pool of the liquid metal, mirroring the "
             "lamplight like polished silver, and a few bright beads that escaped the pour roll loose across "
             "the wood."
+        ),
+    },
+    {
+        "name": "bianco-sangiovanni", "title": "Bianco Sangiovanni",
+        "ability": "destroyCards",
+        "bottom": {"type": "mix", "count": "1"},
+        "bg_color": "chalky lime white, pale grey, and warm lamplit browns",
+        "touchup_color_desc": "white",
+        "art": (
+            "Cakes of slaked lime white drying in rows on a plank, one crumbled into a dish where a fresco "
+            "painter stirs it through a saucer of color, the tone lifting pale as it takes the white. A pail "
+            "of lime putty stands below the bench, its surface skinned over and cracked."
+        ),
+    },
+    # Artwork only. Aqua Fortis splits a color into its components; compose has
+    # no icon for that on an action card, so its bottom carries swap instead.
+    {
+        "name": "walnut-oil", "title": "Walnut Oil",
+        "ability": "destroyCards",
+        "bottom": {"type": "mix", "count": "2"},
+        "bg_color": "pale green-gold oil, warm nut browns, and deep shadow",
+        "touchup_color_desc": "pale green-gold",
+        "art": (
+            "Shelled walnuts crushed under a heavy wooden screw press, clear green-gold oil running along a "
+            "channel into a stoneware jar. A painter tips a little onto a slab and works it through a heap of "
+            "ground pigment with a broad knife until the color turns glossy and dark."
+        ),
+    },
+    {
+        "name": "oak-galls", "title": "Oak Galls",
+        "ability": "destroyCards",
+        "bottom": {"type": "draw_cards", "count": "+2"},
+        "bg_color": "warm tan gall-nuts, iron-black ink, and deep lamplit browns",
+        "touchup_color_desc": "iron-black",
+        "art": (
+            "Round tan gall-nuts picked from an oak branch, several cracked open to show their pithy centers, "
+            "steeping in a jar of darkening liquor. A clerk dips a quill and draws a clean rule down a blank "
+            "sheet, a stack of fresh sheets waiting at his elbow."
+        ),
+    },
+    {
+        "name": "aqua-fortis", "title": "Aqua Fortis",
+        "ability": "destroyCards",
+        "bottom": {"type": "swap"},
+        "bg_color": "corrosive green-yellow fumes, tarnished silver, and dark shadow",
+        "touchup_color_desc": "pale green-yellow",
+        "art": (
+            "A glass flask of aqua fortis on an iron stand, thin yellow fumes curling from its mouth as a "
+            "goldsmith lowers in a granule of alloy. The metal seethes and clouds the liquid while a bead of "
+            "pure gold settles clean at the bottom, parted from the silver it came in with."
+        ),
+    },
+    # Artwork only. Gondola's ability is not written yet, so its bottom is a
+    # coin placeholder -- compose needs something to draw if it is ever run.
+    {
+        "name": "gondola", "title": "Gondola",
+        "ability": "destroyCards",
+        "bottom": {"type": "coin"},
+        "bg_color": "deep canal black-greens, lamplit gold, and wet dark timber",
+        "touchup_color_desc": "warm lamplit gold",
+        "art": (
+            "A black gondola nosed up to a workshop's canal-side door, its upcurved iron prow catching "
+            "the lamplight. A gondolier braces at the stern with his oar while two porters pass down "
+            "bales of dyed cloth and a keg of dye, one lantern swinging from the ferro. The water "
+            "beneath the hull lies black and still, holding only the lantern's reflection and a few "
+            "streaks of spilled color on the wet stone landing."
         ),
     },
 ]

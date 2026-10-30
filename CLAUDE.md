@@ -8,7 +8,7 @@ Board game card generator for Colori (Renaissance Venice dye trade). Uses Google
 
 ```bash
 pip install -e .
-export GOOGLE_API_KEY="AIzaSyAzVe44HEWckQJnZAjCHL4m4g_fqu_HFqg"
+export GOOGLE_API_KEY="<your-key>"
 
 # Run the full pipeline
 python -m generate_cards
@@ -34,10 +34,13 @@ python -m generate_cards --force --dry-run
 | **Dye** | 24 (3 starter + 3 pure primary + 6 mixed primary + 6 secondary + 6 tertiary) | White watercolor vignette |
 | **Pigment** | 8 mineral/resin (artwork only, no tier assigned) | White watercolor vignette |
 | **Ingredient dye** | 7: iris, alkanet, buckthorn, lye, sinopia, giallorino, cornflower (artwork only) | White watercolor vignette |
-| **Action** | 13 (chalk starter + alum, cream-of-tartar, gum-arabic, potash, vinegar, linseed-oil, sal-ammoniac, rubified-vitriol, green-vitriol, wine-lees, borax, quicksilver) | Dark chiaroscuro |
+| **Black & white** | 2: lead-white, bone-black (artwork only, experimental) | White watercolor vignette |
+| **Secondary + white** | 6: coral, verde-antico, porphyry, minium, chrysocolla, murex (artwork only, experimental) | White watercolor vignette |
+| **Single color** | 4: armenian-bole, copper, mulberry, gypsum (artwork only, experimental) | White watercolor vignette |
+| **Action** | 18 (chalk starter + alum, cream-of-tartar, gum-arabic, potash, vinegar, linseed-oil, sal-ammoniac, rubified-vitriol, green-vitriol, wine-lees, borax, quicksilver, bianco-sangiovanni, walnut-oil, oak-galls, aqua-fortis, gondola) | Dark chiaroscuro |
 | **Material** | 18 (3 starter + 15 draft) | TBD |
 | **Buyer** | 54 (18 textile 2-star + 18 ceramic 3-star + 18 painting 4-star) | Gold/ornate |
-| **Total** | **124 unique card faces** | |
+| **Total** | **141 unique card faces** | |
 
 ## Pipeline
 
